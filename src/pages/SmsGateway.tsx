@@ -243,48 +243,54 @@ const SmsGateway = () => {
       {/* Transform Your Business Communication */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Transform Your Business Communication with Vastracktech
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
-              Experience the power of instant, reliable, and cost-effective SMS messaging with Vastracktech. 
-              Connect, engage, and grow—effortlessly.
-            </p>
-          </div>
+          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+            {/* Main Content */}
+            <div className="lg:col-span-2">
+              <div className="text-center lg:text-left mb-12">
+                <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+                  Transform Your Business Communication with Vastracktech
+                </h2>
+                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                  Experience the power of instant, reliable, and cost-effective SMS messaging with Vastracktech. 
+                  Connect, engage, and grow—effortlessly.
+                </p>
+              </div>
 
-          <Card className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-12 text-center border-0">
-            <div className="flex items-center justify-center mb-6">
-              <MessageSquare className="h-8 w-8 mr-3" />
-              <span className="text-2xl font-semibold">
-                Get started today! Contact us to integrate our SMS Gateway into your business.
-              </span>
+              <Card className="bg-gradient-to-r from-green-500 to-green-600 text-white p-12 text-center border-0">
+                <div className="flex items-center justify-center mb-6">
+                  <MessageSquare className="h-8 w-8 mr-3" />
+                  <span className="text-2xl font-semibold">
+                    Get started today! Contact us to integrate our SMS Gateway into your business.
+                  </span>
+                </div>
+                <Button variant="secondary" size="lg" asChild>
+                  <Link to="/contact">Contact Our Team</Link>
+                </Button>
+              </Card>
             </div>
-            <Button variant="secondary" size="lg" asChild>
-              <Link to="/contact">Contact Our Team</Link>
-            </Button>
-          </Card>
-        </div>
-      </section>
 
-      {/* Related Links Sidebar */}
-      <section className="py-16 bg-secondary/30">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-md ml-auto">
-            <h3 className="text-2xl font-bold mb-6 text-primary">Related Links</h3>
-            <div className="space-y-4">
-              <Link to="/vas-solutions/ussd" className="block text-primary hover:text-primary-glow transition-colors">
-                USSD Platform
-              </Link>
-              <Link to="/vas-solutions/ivr" className="block text-primary hover:text-primary-glow transition-colors">
-                IVR Solution
-              </Link>
-              <Link to="/services" className="block text-primary hover:text-primary-glow transition-colors">
-                All Services
-              </Link>
-              <Link to="/contact" className="block text-primary hover:text-primary-glow transition-colors">
-                Contact Support
-              </Link>
+            {/* Related Links Sidebar */}
+            <div className="lg:col-span-1">
+              <div className="bg-secondary/30 p-8 rounded-lg">
+                <h3 className="text-2xl font-bold mb-6 text-primary">Related Links</h3>
+                <div className="space-y-4">
+                  <Link to="/ussd-services" className="block text-primary hover:text-primary-glow transition-colors">
+                    USSD Services
+                  </Link>
+                  <Link to="/ivr-solutions" className="block text-primary hover:text-primary-glow transition-colors">
+                    IVR Solutions
+                  </Link>
+                  <Link to="/mobile-payments" className="block text-primary hover:text-primary-glow transition-colors">
+                    Mobile Payments
+                  </Link>
+                  <Link to="/services" className="block text-primary hover:text-primary-glow transition-colors">
+                    All Services
+                  </Link>
+                  <Link to="/contact" className="block text-primary hover:text-primary-glow transition-colors">
+                    Contact Support
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
