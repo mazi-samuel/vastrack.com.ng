@@ -256,7 +256,7 @@ const MobilePayments = () => {
             </p>
           </div>
 
-          <Card className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-12 text-center border-0">
+          <Card className="bg-gradient-primary text-primary-foreground p-12 text-center border-0">
             <div className="flex items-center justify-center mb-6">
               <CreditCard className="h-8 w-8 mr-3" />
               <span className="text-2xl font-semibold">
