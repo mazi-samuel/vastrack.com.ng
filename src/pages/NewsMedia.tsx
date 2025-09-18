@@ -131,31 +131,31 @@ const NewsMediaPage = () => {
               <span className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
                 Featured Article
               </span>
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden group hover:shadow-xl hover:bg-primary hover:-translate-y-2 transition-all duration-300">
                 <div className="md:flex">
                   <div className="md:w-1/2">
                     <img 
                       src={item.image} 
                       alt={item.title}
-                      className="w-full h-64 md:h-full object-cover"
+                      className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="md:w-1/2 p-8">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-white mb-4">
                       <Calendar className="h-4 w-4" />
                       <span>{item.date}</span>
-                      <span className="ml-auto text-primary font-medium">{item.category}</span>
+                      <span className="ml-auto text-primary group-hover:text-white font-medium">{item.category}</span>
                     </div>
                     
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-white mb-4">
                       {item.title}
                     </h2>
                     
-                    <p className="text-muted-foreground mb-6">
+                    <p className="text-muted-foreground group-hover:text-white/90 mb-6">
                       {item.excerpt}
                     </p>
                     
-                    <Button className="bg-primary hover:bg-primary-glow">
+                    <Button className="bg-primary hover:bg-primary-glow group-hover:bg-white group-hover:text-primary group-hover:border-white">
                       {item.isDocument ? (
                         <Link 
                           to={item.documentRoute || "#"} 
@@ -190,7 +190,7 @@ const NewsMediaPage = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {newsItems.filter(item => !item.featured).map((item, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 bg-card border-border/50">
+              <Card key={index} className="group hover:shadow-xl hover:bg-primary hover:-translate-y-2 transition-all duration-300 bg-card border-border/50">
                 <div className="relative overflow-hidden">
                   <img 
                     src={item.image} 
@@ -217,7 +217,7 @@ const NewsMediaPage = () => {
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       item.category === 'Regulatory' 
                         ? 'text-white' 
-                        : 'bg-primary text-primary-foreground'
+                        : 'bg-primary text-primary-foreground group-hover:bg-white group-hover:text-primary'
                     }`}
                     style={item.category === 'Regulatory' ? { backgroundColor: '#0c8c84' } : undefined}
                     >
@@ -227,21 +227,21 @@ const NewsMediaPage = () => {
                 </div>
                 
                 <CardContent className="p-6">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-white mb-3">
                     <Calendar className="h-4 w-4" />
                     <span>{item.date}</span>
-                    <span className="ml-auto text-primary font-medium">{item.type}</span>
+                    <span className="ml-auto text-primary group-hover:text-white font-medium">{item.type}</span>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-foreground mb-3 line-clamp-2">
+                  <h3 className="text-xl font-semibold text-foreground group-hover:text-white mb-3 line-clamp-2">
                     {item.title}
                   </h3>
                   
-                  <p className="text-muted-foreground mb-4 line-clamp-3">
+                  <p className="text-muted-foreground group-hover:text-white/90 mb-4 line-clamp-3">
                     {item.excerpt}
                   </p>
                   
-                  <Button variant="outline" className="group/btn">
+                  <Button variant="outline" className="group/btn group-hover:bg-white group-hover:text-primary group-hover:border-white">
                     {item.isDocument ? (
                       <Link 
                         to={item.documentRoute || "#"} 
