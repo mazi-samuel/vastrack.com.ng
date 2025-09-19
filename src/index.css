@@ -134,4 +134,87 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Mobile-first optimizations */
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Enhanced touch targets for mobile */
+  button, a {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Better mobile typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply leading-tight;
+  }
+
+  /* Improved mobile readability */
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Mobile-friendly inputs */
+  input, textarea, select {
+    @apply text-base;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Smooth transitions for mobile interactions */
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  /* Better mobile scrolling */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Mobile navigation enhancements */
+  @media (max-width: 1024px) {
+    .mobile-nav-item {
+      @apply py-3 px-4 text-base;
+    }
+    
+    .mobile-touch-target {
+      @apply min-h-[48px] min-w-[48px];
+    }
+  }
+
+  /* Tablet and mobile spacing adjustments */
+  @media (max-width: 768px) {
+    .section-padding {
+      @apply py-12;
+    }
+    
+    .card-padding {
+      @apply p-4;
+    }
+    
+    .mobile-text-scale {
+      @apply text-sm;
+    }
+  }
+
+  /* Mobile-first container adjustments */
+  @media (max-width: 640px) {
+    .container {
+      @apply px-4;
+    }
+    
+    .hero-text {
+      @apply text-2xl;
+    }
+    
+    .section-title {
+      @apply text-xl;
+    }
+  }
 }

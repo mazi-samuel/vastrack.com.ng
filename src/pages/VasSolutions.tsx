@@ -49,13 +49,13 @@ const VasSolutions = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-hero text-hero-foreground">
+      <section className="py-12 md:py-16 lg:py-20 bg-hero text-hero-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-2">
               VAS Solutions
             </h1>
-            <p className="text-xl text-hero-foreground/90 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-hero-foreground/90 leading-relaxed px-4">
               Comprehensive Value-Added Services designed to transform your business communications 
               and enhance customer engagement across multiple industries.
             </p>
@@ -64,55 +64,55 @@ const VasSolutions = () => {
       </section>
 
       {/* VAS Solutions Grid - Statistics Style */}
-      <section className="py-20" style={{ backgroundColor: 'white' }}>
+      <section className="py-12 md:py-16 lg:py-20" style={{ backgroundColor: 'white' }}>
         <div className="container mx-auto px-4">
           <div 
-            className="text-center mb-16 p-8 rounded-2xl mx-auto max-w-4xl" 
+            className="text-center mb-12 md:mb-16 p-6 md:p-8 rounded-2xl mx-auto max-w-4xl" 
             style={{ backgroundColor: '#5cbc8c' }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
               Industry-Specific Solutions
             </h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed text-white">
+            <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-white px-2">
               Tailored VAS solutions across diverse sectors, empowering businesses with cutting-edge technology and seamless integration.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {vasSolutions.map((solution, index) => (
               <div key={index} className="h-full">
                 {solution.link === "#" ? (
-                  <div className="text-center group transition-all duration-300 hover:transform hover:scale-110 hover:-translate-y-2 cursor-not-allowed h-full">
-                    <div className="rounded-2xl p-8 transition-all duration-300 group-hover:shadow-xl shadow-lg h-full flex flex-col justify-between bg-white group-hover:bg-primary">
-                      <div className="flex flex-col items-center">
-                        <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors duration-300">
+                  <div className="text-center group transition-all duration-300 hover:transform hover:scale-105 hover:-translate-y-1 cursor-not-allowed h-full">
+                    <div className="rounded-2xl p-6 md:p-8 transition-all duration-300 group-hover:shadow-xl shadow-lg h-full flex flex-col justify-between bg-white group-hover:bg-primary min-h-[280px]">
+                      <div className="flex flex-col items-center flex-1">
+                        <div className="bg-primary/10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:bg-white/20 transition-colors duration-300 flex-shrink-0">
                           <solution.icon 
-                            className="h-10 w-10 transition-colors duration-300 text-primary group-hover:text-white" 
+                            className="h-8 w-8 md:h-10 md:w-10 transition-colors duration-300 text-primary group-hover:text-white" 
                           />
                         </div>
-                        <h3 className="text-2xl font-semibold mb-3 transition-colors duration-300 text-primary group-hover:text-white">
+                        <h3 className="text-lg md:text-2xl font-semibold mb-2 md:mb-3 transition-colors duration-300 text-primary group-hover:text-white">
                           {solution.title}
                         </h3>
-                        <p className="leading-relaxed transition-colors duration-300 text-primary group-hover:text-white/90 mb-4">
+                        <p className="text-sm md:text-base leading-relaxed transition-colors duration-300 text-primary group-hover:text-white/90 mb-3 md:mb-4 px-2">
                           {solution.description}
                         </p>
                       </div>
-                      <p className="text-sm text-gray-500 group-hover:text-white/80 transition-colors duration-300 mt-auto">Coming Soon</p>
+                      <p className="text-xs md:text-sm text-gray-500 group-hover:text-white/80 transition-colors duration-300 mt-auto">Coming Soon</p>
                     </div>
                   </div>
                 ) : (
                   <Link to={solution.link} className="block h-full">
-                    <div className="text-center group transition-all duration-300 hover:transform hover:scale-110 hover:-translate-y-2 cursor-pointer h-full">
-                      <div className="rounded-2xl p-8 transition-all duration-300 group-hover:shadow-xl shadow-lg h-full flex flex-col justify-center bg-white group-hover:bg-primary">
-                        <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors duration-300">
+                    <div className="text-center group transition-all duration-300 hover:transform hover:scale-105 hover:-translate-y-1 cursor-pointer h-full">
+                      <div className="rounded-2xl p-6 md:p-8 transition-all duration-300 group-hover:shadow-xl shadow-lg h-full flex flex-col justify-center bg-white group-hover:bg-primary min-h-[280px]">
+                        <div className="bg-primary/10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:bg-white/20 transition-colors duration-300 flex-shrink-0">
                           <solution.icon 
-                            className="h-10 w-10 transition-colors duration-300 text-primary group-hover:text-white" 
+                            className="h-8 w-8 md:h-10 md:w-10 transition-colors duration-300 text-primary group-hover:text-white" 
                           />
                         </div>
-                        <h3 className="text-2xl font-semibold mb-3 transition-colors duration-300 text-primary group-hover:text-white">
+                        <h3 className="text-lg md:text-2xl font-semibold mb-2 md:mb-3 transition-colors duration-300 text-primary group-hover:text-white">
                           {solution.title}
                         </h3>
-                        <p className="leading-relaxed transition-colors duration-300 text-primary group-hover:text-white/90">
+                        <p className="text-sm md:text-base leading-relaxed transition-colors duration-300 text-primary group-hover:text-white/90 px-2">
                           {solution.description}
                         </p>
                       </div>

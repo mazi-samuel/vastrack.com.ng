@@ -50,12 +50,12 @@ const BankingSolutions = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-hero text-hero-foreground">
+      <section className="py-12 md:py-16 lg:py-20 bg-hero text-hero-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             {/* Breadcrumb */}
-            <div className="mb-6">
-              <nav className="text-sm text-hero-foreground/70">
+            <div className="mb-4 md:mb-6">
+              <nav className="text-xs sm:text-sm text-hero-foreground/70">
                 <Link to="/" className="hover:text-hero-foreground transition-colors">Home</Link>
                 <span className="mx-2">/</span>
                 <Link to="/vas-solutions" className="hover:text-hero-foreground transition-colors">VAS Solutions</Link>
@@ -64,27 +64,27 @@ const BankingSolutions = () => {
               </nav>
             </div>
             
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Banking Solutions – Secure, Scalable<br />
-              & Innovative Digital Banking
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight px-2">
+              Banking Solutions – Secure, Scalable<br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>& Innovative Digital Banking
             </h1>
           </div>
         </div>
       </section>
 
       {/* Main Content Section */}
-      <section className="py-16 bg-background">
+      <section className="py-12 md:py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2">
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              <div className="prose prose-sm sm:prose-lg max-w-none">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
                   At Vastracktech, we create banking solutions that help financial institutions offer secure, fast, and customer-focused digital services. Our value-added solutions enhance mobile banking, streamline digital transactions, and deepen customer engagement—making everyday financial operations smooth and reliable while supporting greater financial inclusion.
                 </p>
 
-                <div className="mb-12">
-                  <h2 className="text-3xl font-bold mb-6 text-foreground border-b-2 border-primary pb-2">
+                <div className="mb-8 md:mb-12">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-foreground border-b-2 border-primary pb-2">
                     Why Choose Vastracktech's Banking Solutions?
                   </h2>
                   
@@ -107,37 +107,37 @@ const BankingSolutions = () => {
                     Comprehensive Banking Solutions
                   </h2>
                   
-                  <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                  <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                     Our VAS-powered banking platform is designed for various financial applications, including:
                   </p>
 
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
                     {services.map((service, index) => (
-                      <div key={index} className="flex items-start gap-4 p-4 bg-muted/50 rounded-lg">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                          <service.icon className="h-6 w-6 text-primary" />
+                      <div key={index} className="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-muted/50 rounded-lg">
+                        <div className="bg-primary/10 p-2 md:p-3 rounded-lg flex-shrink-0">
+                          <service.icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                         </div>
-                        <div>
-                          <h3 className="font-semibold text-foreground mb-2">{service.title}</h3>
-                          <p className="text-sm text-muted-foreground">{service.description}</p>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="font-semibold text-foreground mb-1 md:mb-2 text-sm md:text-base">{service.title}</h3>
+                          <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{service.description}</p>
                         </div>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="mb-12">
-                  <h2 className="text-3xl font-bold mb-6 text-foreground border-b-2 border-primary pb-2">
+                <div className="mb-8 md:mb-12">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-foreground border-b-2 border-primary pb-2">
                     Transforming Banking with Innovation
                   </h2>
                   
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
                     At the heart of what we do is innovation—aimed at boosting operational efficiency, improving customer experience, and expanding access to financial services. No matter the size or type of your organization, Vastracktech is here to help you build a secure, seamless, and future-ready banking experience.
                   </p>
                 </div>
 
                 {/* CTA Section */}
-                <div className="bg-gradient-primary text-primary-foreground p-8 rounded-2xl text-center">
+                <div className="bg-gradient-primary text-primary-foreground p-6 md:p-8 rounded-2xl text-center">
                   <div className="flex items-center justify-center mb-4">
                     <Shield className="h-8 w-8 mr-3" />
                     <span className="text-xl font-semibold">
@@ -149,24 +149,24 @@ const BankingSolutions = () => {
             </div>
 
             {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-8 space-y-8">
+            <div className="lg:col-span-1 order-first lg:order-last">
+              <div className="lg:sticky lg:top-8 space-y-6 md:space-y-8">
                 {/* Related Links */}
-                <div>
-                  <h3 className="text-xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">
+                <div className="bg-muted/30 p-4 md:p-6 rounded-lg">
+                  <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-primary border-b-2 border-primary pb-2">
                     Related Links
                   </h3>
-                  <div className="space-y-3">
-                    <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors duration-300">
+                  <div className="space-y-2 md:space-y-3">
+                    <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
                       Health Services
                     </Link>
-                    <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors duration-300">
+                    <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
                       Education Tools
                     </Link>
-                    <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors duration-300">
+                    <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
                       Technical Architecture
                     </Link>
-                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors duration-300">
+                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
                       Partnership Models
                     </Link>
                   </div>
