@@ -17,7 +17,7 @@ const PartnershipModelsPage = () => {
             <span className="mx-2">/</span>
             <span className="text-gray-300">VAS Solutions</span>
             <span className="mx-2">/</span>
-            <span className="text-blue-400">Partnership Models</span>
+            <span className="text-primary">Partnership Models</span>
           </nav>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 max-w-4xl">
             Partnership Models – Driving Success Together Through Strategic Collaboration
@@ -89,9 +89,9 @@ const PartnershipModelsPage = () => {
               </h2>
               <div className="space-y-8">
                 {/* Technology Partner */}
-                <div className="border-l-4 border-blue-500 pl-6">
+                <div className="border-l-4 border-primary pl-6">
                   <div className="flex items-center mb-3">
-                    <ArrowRight className="h-5 w-5 text-blue-600 mr-2" />
+                    <ArrowRight className="h-5 w-5 text-primary mr-2" />
                     <h3 className="text-xl font-semibold text-gray-900">Technology Partner</h3>
                   </div>
                   <p className="text-gray-700 mb-3">
@@ -99,11 +99,11 @@ const PartnershipModelsPage = () => {
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center">
-                      <TrendingUp className="h-4 w-4 text-blue-600 mr-2" />
+                      <TrendingUp className="h-4 w-4 text-primary mr-2" />
                       <span className="text-sm text-gray-600">Revenue Sharing – Share in the success of jointly developed solutions.</span>
                     </div>
                     <div className="flex items-center">
-                      <Globe className="h-4 w-4 text-blue-600 mr-2" />
+                      <Globe className="h-4 w-4 text-primary mr-2" />
                       <span className="text-sm text-gray-600">Global Reach – Tap into new markets and extend your service offering with innovative digital solutions.</span>
                     </div>
                   </div>
@@ -196,7 +196,7 @@ const PartnershipModelsPage = () => {
             </div>
 
             {/* Call to Action */}
-            <Card className="bg-blue-600 text-white">
+            <Card className="bg-primary text-primary-foreground">
               <CardContent className="p-8 text-center">
                 <Handshake className="h-12 w-12 mx-auto mb-4 text-white" />
                 <h3 className="text-2xl font-bold mb-4">

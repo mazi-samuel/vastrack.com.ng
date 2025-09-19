@@ -150,7 +150,7 @@ const TechnicalArchitecturePage = () => {
                 </p>
 
                 {/* CTA Section */}
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-8 text-center text-white">
+                <div className="bg-gradient-primary rounded-2xl p-8 text-center text-primary-foreground">
                   <div className="flex items-center justify-center mb-4">
                     <Network className="h-8 w-8 mr-3" />
                     <span className="text-xl font-semibold">

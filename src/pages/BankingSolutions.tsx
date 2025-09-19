@@ -137,7 +137,7 @@ const BankingSolutions = () => {
                 </div>
 
                 {/* CTA Section */}
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-8 rounded-2xl text-center">
+                <div className="bg-gradient-primary text-primary-foreground p-8 rounded-2xl text-center">
                   <div className="flex items-center justify-center mb-4">
                     <Shield className="h-8 w-8 mr-3" />
                     <span className="text-xl font-semibold">

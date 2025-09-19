@@ -80,51 +80,39 @@ const VasSolutions = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {vasSolutions.map((solution, index) => (
-              <div key={index}>
+              <div key={index} className="h-full">
                 {solution.link === "#" ? (
-                  <div className="text-center group transition-all duration-300 hover:transform hover:scale-110 cursor-not-allowed">
-                    <div 
-                      className="rounded-2xl p-8 border-2 transition-all duration-300 group-hover:shadow-xl group-hover:bg-[#5cbc8c]"
-                      style={{ 
-                        backgroundColor: 'white',
-                        borderColor: '#5cbc8c'
-                      }}
-                    >
-                      <div className="bg-[#5cbc8c]/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors duration-300">
-                        <solution.icon 
-                          className="h-10 w-10 transition-colors duration-300 group-hover:text-white" 
-                          style={{ color: '#5cbc8c' }}
-                        />
+                  <div className="text-center group transition-all duration-300 hover:transform hover:scale-110 hover:-translate-y-2 cursor-not-allowed h-full">
+                    <div className="rounded-2xl p-8 transition-all duration-300 group-hover:shadow-xl shadow-lg h-full flex flex-col justify-between bg-white group-hover:bg-primary">
+                      <div className="flex flex-col items-center">
+                        <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors duration-300">
+                          <solution.icon 
+                            className="h-10 w-10 transition-colors duration-300 text-primary group-hover:text-white" 
+                          />
+                        </div>
+                        <h3 className="text-2xl font-semibold mb-3 transition-colors duration-300 text-primary group-hover:text-white">
+                          {solution.title}
+                        </h3>
+                        <p className="leading-relaxed transition-colors duration-300 text-primary group-hover:text-white/90 mb-4">
+                          {solution.description}
+                        </p>
                       </div>
-                      <h3 className="text-2xl font-semibold mb-3 transition-colors duration-300 group-hover:text-white" style={{ color: '#5cbc8c' }}>
-                        {solution.title}
-                      </h3>
-                      <p className="leading-relaxed transition-colors duration-300 group-hover:text-white" style={{ color: '#5cbc8c' }}>
-                        {solution.description}
-                      </p>
-                      <p className="text-sm text-gray-500 mt-3">Coming Soon</p>
+                      <p className="text-sm text-gray-500 group-hover:text-white/80 transition-colors duration-300 mt-auto">Coming Soon</p>
                     </div>
                   </div>
                 ) : (
-                  <Link to={solution.link} className="block">
-                    <div className="text-center group transition-all duration-300 hover:transform hover:scale-110 cursor-pointer">
-                      <div 
-                        className="rounded-2xl p-8 border-2 transition-all duration-300 group-hover:shadow-xl group-hover:bg-[#5cbc8c]"
-                        style={{ 
-                          backgroundColor: 'white',
-                          borderColor: '#5cbc8c'
-                        }}
-                      >
-                        <div className="bg-[#5cbc8c]/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors duration-300">
+                  <Link to={solution.link} className="block h-full">
+                    <div className="text-center group transition-all duration-300 hover:transform hover:scale-110 hover:-translate-y-2 cursor-pointer h-full">
+                      <div className="rounded-2xl p-8 transition-all duration-300 group-hover:shadow-xl shadow-lg h-full flex flex-col justify-center bg-white group-hover:bg-primary">
+                        <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors duration-300">
                           <solution.icon 
-                            className="h-10 w-10 transition-colors duration-300 group-hover:text-white" 
-                            style={{ color: '#5cbc8c' }}
+                            className="h-10 w-10 transition-colors duration-300 text-primary group-hover:text-white" 
                           />
                         </div>
-                        <h3 className="text-2xl font-semibold mb-3 transition-colors duration-300 group-hover:text-white" style={{ color: '#5cbc8c' }}>
+                        <h3 className="text-2xl font-semibold mb-3 transition-colors duration-300 text-primary group-hover:text-white">
                           {solution.title}
                         </h3>
-                        <p className="leading-relaxed transition-colors duration-300 group-hover:text-white" style={{ color: '#5cbc8c' }}>
+                        <p className="leading-relaxed transition-colors duration-300 text-primary group-hover:text-white/90">
                           {solution.description}
                         </p>
                       </div>
@@ -150,7 +138,7 @@ const VasSolutions = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8 text-center bg-card border-0 hover:shadow-card transition-all duration-300">
+            <Card className="p-8 text-center bg-muted border-0 hover:shadow-card transition-all duration-300">
               <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-primary">1</span>
               </div>
@@ -160,7 +148,7 @@ const VasSolutions = () => {
               </p>
             </Card>
 
-            <Card className="p-8 text-center bg-card border-0 hover:shadow-card transition-all duration-300">
+            <Card className="p-8 text-center bg-muted border-0 hover:shadow-card transition-all duration-300">
               <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-primary">2</span>
               </div>
@@ -170,7 +158,7 @@ const VasSolutions = () => {
               </p>
             </Card>
 
-            <Card className="p-8 text-center bg-card border-0 hover:shadow-card transition-all duration-300">
+            <Card className="p-8 text-center bg-muted border-0 hover:shadow-card transition-all duration-300">
               <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-primary">3</span>
               </div>
