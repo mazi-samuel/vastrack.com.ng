@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 
 const BankingSolutions = () => {
   const features = [
-    "Secure & Compliant – End-to-end encryption, fraud detection, and regulatory compliance.",
-    "Omnichannel Support – USSD, SMS, mobile apps, and web banking integration.",
-    "Scalable & Customizable – Tailored solutions for banks, MFIs, fintech, and digital lenders.",
-    "Seamless API Integration – Connect effortlessly with existing banking infrastructures."
+    "<strong>Secure & Compliant</strong> – End-to-end encryption, fraud detection, and regulatory compliance.",
+    "<strong>Omnichannel Support</strong> – USSD, SMS, mobile apps, and web banking integration.",
+    "<strong>Scalable & Customizable</strong> – Tailored solutions for banks, MFIs, fintech, and digital lenders.",
+    "<strong>Seamless API Integration</strong> – Connect effortlessly with existing banking infrastructures."
   ];
 
   const services = [

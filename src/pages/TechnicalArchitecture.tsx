@@ -47,95 +47,95 @@ const TechnicalArchitecturePage = () => {
 
               {/* Why Choose Section */}
               <div className="mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold mb-8 text-slate-700">
+                <h2 className="text-3xl font-bold mb-6 text-foreground border-b-2 border-primary pb-2">
                   Why Choose Vastracktech's Technical Architecture?
                 </h2>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-[#5cbc8c] flex-shrink-0 mt-1" />
-                    <p className="text-gray-700 leading-relaxed">
+                    <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-muted-foreground leading-relaxed">
                       <strong>Scalable & Resilient</strong> – Designed for high traffic loads and rapid scalability.
-                    </p>
+                    </span>
                   </div>
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-[#5cbc8c] flex-shrink-0 mt-1" />
-                    <p className="text-gray-700 leading-relaxed">
+                    <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-muted-foreground leading-relaxed">
                       <strong>Multi-Channel Support</strong> – USSD, SMS, IVR, Mobile Apps, APIs, and Web-based services.
-                    </p>
+                    </span>
                   </div>
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-[#5cbc8c] flex-shrink-0 mt-1" />
-                    <p className="text-gray-700 leading-relaxed">
+                    <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-muted-foreground leading-relaxed">
                       <strong>Cloud & On-Premise Deployment</strong> – Flexible hosting to meet business needs.
-                    </p>
+                    </span>
                   </div>
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-[#5cbc8c] flex-shrink-0 mt-1" />
-                    <p className="text-gray-700 leading-relaxed">
+                    <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-muted-foreground leading-relaxed">
                       <strong>End-to-End Security</strong> – Encryption, authentication, and compliance with industry standards.
-                    </p>
+                    </span>
                   </div>
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-[#5cbc8c] flex-shrink-0 mt-1" />
-                    <p className="text-gray-700 leading-relaxed">
+                    <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-muted-foreground leading-relaxed">
                       <strong>Seamless API Integration</strong> – Easy connectivity with banking, healthcare, and enterprise platforms.
-                    </p>
+                    </span>
                   </div>
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-[#5cbc8c] flex-shrink-0 mt-1" />
-                    <p className="text-gray-700 leading-relaxed">
+                    <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-muted-foreground leading-relaxed">
                       <strong>24/7 High Availability</strong> – Load balancing, failover mechanisms, and redundancy for uninterrupted services.
-                    </p>
+                    </span>
                   </div>
                 </div>
               </div>
 
               {/* Key Components */}
               <div className="mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold mb-8 text-slate-700">
+                <h2 className="text-3xl font-bold mb-6 text-foreground border-b-2 border-primary pb-2">
                   Key Components of Our VAS Technical Architecture
                 </h2>
                 <div className="space-y-8">
                   <div className="flex items-start gap-4">
-                    <Network className="h-8 w-8 text-[#5cbc8c] flex-shrink-0 mt-2" />
+                    <Network className="h-8 w-8 text-primary flex-shrink-0 mt-2" />
                     <div>
-                      <h3 className="text-xl font-semibold mb-2 text-slate-700">Telecom Integration</h3>
-                      <p className="text-gray-700 leading-relaxed">Direct connectivity with MNOs, aggregators, and telecom gateways.</p>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground">Telecom Integration</h3>
+                      <p className="text-muted-foreground leading-relaxed">Direct connectivity with MNOs, aggregators, and telecom gateways.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <Cpu className="h-8 w-8 text-[#5cbc8c] flex-shrink-0 mt-2" />
+                    <Cpu className="h-8 w-8 text-primary flex-shrink-0 mt-2" />
                     <div>
-                      <h3 className="text-xl font-semibold mb-2 text-slate-700">Microservices-Based Architecture</h3>
-                      <p className="text-gray-700 leading-relaxed">Modular, containerized, and API-driven approach for scalability.</p>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground">Microservices-Based Architecture</h3>
+                      <p className="text-muted-foreground leading-relaxed">Modular, containerized, and API-driven approach for scalability.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <Zap className="h-8 w-8 text-[#5cbc8c] flex-shrink-0 mt-2" />
+                    <Zap className="h-8 w-8 text-primary flex-shrink-0 mt-2" />
                     <div>
-                      <h3 className="text-xl font-semibold mb-2 text-slate-700">Real-Time Processing</h3>
-                      <p className="text-gray-700 leading-relaxed">Low-latency messaging, transaction handling, and event-driven architecture.</p>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground">Real-Time Processing</h3>
+                      <p className="text-muted-foreground leading-relaxed">Low-latency messaging, transaction handling, and event-driven architecture.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <Database className="h-8 w-8 text-[#5cbc8c] flex-shrink-0 mt-2" />
+                    <Database className="h-8 w-8 text-primary flex-shrink-0 mt-2" />
                     <div>
-                      <h3 className="text-xl font-semibold mb-2 text-slate-700">Secure Data Storage</h3>
-                      <p className="text-gray-700 leading-relaxed">Encrypted databases with backup & disaster recovery mechanisms.</p>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground">Secure Data Storage</h3>
+                      <p className="text-muted-foreground leading-relaxed">Encrypted databases with backup & disaster recovery mechanisms.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <Shield className="h-8 w-8 text-[#5cbc8c] flex-shrink-0 mt-2" />
+                    <Shield className="h-8 w-8 text-primary flex-shrink-0 mt-2" />
                     <div>
-                      <h3 className="text-xl font-semibold mb-2 text-slate-700">AI & Automation</h3>
-                      <p className="text-gray-700 leading-relaxed">Smart analytics, AI-driven decision-making, and intelligent monitoring.</p>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground">AI & Automation</h3>
+                      <p className="text-muted-foreground leading-relaxed">Smart analytics, AI-driven decision-making, and intelligent monitoring.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <Link2 className="h-8 w-8 text-[#5cbc8c] flex-shrink-0 mt-2" />
+                    <Link2 className="h-8 w-8 text-primary flex-shrink-0 mt-2" />
                     <div>
-                      <h3 className="text-xl font-semibold mb-2 text-slate-700">API Gateway & Middleware</h3>
-                      <p className="text-gray-700 leading-relaxed">Enabling secure third-party integrations for fintech, e-commerce, and government services.</p>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground">API Gateway & Middleware</h3>
+                      <p className="text-muted-foreground leading-relaxed">Enabling secure third-party integrations for fintech, e-commerce, and government services.</p>
                     </div>
                   </div>
                 </div>
@@ -143,7 +143,7 @@ const TechnicalArchitecturePage = () => {
 
               {/* Future-Ready Section */}
               <div className="mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold mb-8 text-slate-700">
+                <h2 className="text-3xl font-bold mb-6 text-foreground border-b-2 border-primary pb-2">
                   Future-Ready VAS Technology
                 </h2>
                 <p className="text-lg leading-relaxed text-gray-700 mb-8">
