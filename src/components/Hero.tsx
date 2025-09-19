@@ -1,8 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/vas-solutions');
+  };
+
+  const handleLearnMore = () => {
+    navigate('/knowledge-hub');
+  };
+
   return (
     <section 
       className="relative min-h-screen flex items-center justify-center bg-hero text-hero-foreground overflow-hidden"
@@ -46,15 +56,21 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 max-w-md sm:max-w-none mx-auto">
-            <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]" asChild>
-              <Link to="/vas-solutions">
-                Get Started Today
-              </Link>
+            <Button 
+              variant="cta" 
+              size="lg" 
+              className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]"
+              onClick={handleGetStarted}
+            >
+              Get Started Today
             </Button>
-            <Button variant="hero" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]" asChild>
-              <Link to="/knowledge-hub">
-                Learn More
-              </Link>
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]"
+              onClick={handleLearnMore}
+            >
+              Learn More
             </Button>
           </div>
         </div>
