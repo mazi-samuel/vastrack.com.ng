@@ -163,41 +163,41 @@ const TechnicalArchitecturePage = () => {
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <div className="bg-white rounded-2xl p-6 shadow-lg sticky top-8">
+              <div className="sticky top-8 space-y-8">
                 {/* Related Links */}
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-6 text-[#5cbc8c] border-b border-[#5cbc8c] pb-2">
+                <div>
+                  <h3 className="text-xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">
                     Related Links
                   </h3>
                   <div className="space-y-3">
-                    <a href="/banking-solutions" className="block text-[#5cbc8c] hover:underline text-lg">
+                    <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors">
                       Banking Solutions
-                    </a>
-                    <a href="/health-services" className="block text-[#5cbc8c] hover:underline text-lg">
+                    </Link>
+                    <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors">
                       Health Services
-                    </a>
-                    <a href="/education-tools" className="block text-[#5cbc8c] hover:underline text-lg">
+                    </Link>
+                    <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors">
                       Education Tools
-                    </a>
-                    <a href="#" className="block text-[#5cbc8c] hover:underline text-lg">
+                    </Link>
+                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors">
                       Partnership Models
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
-                {/* Need Help Section */}
+                {/* Need Help */}
                 <div>
-                  <h3 className="text-2xl font-bold mb-6 text-[#5cbc8c] border-b border-[#5cbc8c] pb-2">
+                  <h3 className="text-xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">
                     Need Help?
                   </h3>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-muted-foreground mb-6">
                     Contact our support team for assistance
                   </p>
-                  <Button 
-                    className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-0 rounded-full py-3 px-6 text-lg font-semibold"
-                  >
-                    Contact Us
-                  </Button>
+                  <Link to="/contact">
+                    <Button variant="cta" className="w-full">
+                      Contact Us
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

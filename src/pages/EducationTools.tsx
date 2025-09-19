@@ -162,9 +162,10 @@ const EducationTools = () => {
                   We're dedicated to transforming education through technology. Our tools are designed for everyone from K-12 schools and universities to edtech startups and government initiatives, all with the goal of improving accessibility and driving meaningful digital change.
                 </p>
 
-                <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 text-center text-primary-foreground mb-8">
+                <div className="bg-gradient-primary rounded-2xl p-8 text-center text-primary-foreground mb-8">
+                  <BookOpen className="h-8 w-8 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold mb-4">
-                    📚 Ready to redefine learning? Partner with us at Vastracktech, and let's build the future of education together.
+                    Ready to redefine learning? Partner with us at Vastracktech, and let's build the future of education together.
                   </h3>
                 </div>
               </div>
@@ -173,33 +174,41 @@ const EducationTools = () => {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="sticky top-8 space-y-8">
-                <Card className="p-6 bg-card border-0 shadow-card">
-                  <h3 className="text-xl font-bold text-foreground mb-6">Related Links</h3>
-                  <div className="space-y-4">
-                    <Link to="/banking-solutions" className="block text-primary hover:text-primary/80 transition-colors">
+                {/* Related Links */}
+                <div>
+                  <h3 className="text-xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">
+                    Related Links
+                  </h3>
+                  <div className="space-y-3">
+                    <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors">
                       Banking Solutions
                     </Link>
-                    <Link to="/health-services" className="block text-primary hover:text-primary/80 transition-colors">
+                    <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors">
                       Health Services
                     </Link>
-                    <a href="#" className="block text-muted-foreground cursor-not-allowed">
+                    <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors">
                       Technical Architecture
-                    </a>
-                    <a href="#" className="block text-muted-foreground cursor-not-allowed">
+                    </Link>
+                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors">
                       Partnership Models
-                    </a>
+                    </Link>
                   </div>
-                </Card>
+                </div>
 
-                <Card className="p-6 bg-card border-0 shadow-card">
-                  <h3 className="text-xl font-bold text-foreground mb-4">Need Help?</h3>
+                {/* Need Help */}
+                <div>
+                  <h3 className="text-xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">
+                    Need Help?
+                  </h3>
                   <p className="text-muted-foreground mb-6">
                     Contact our support team for assistance
                   </p>
-                  <Button variant="cta" className="w-full">
-                    Contact Us
-                  </Button>
-                </Card>
+                  <Link to="/contact">
+                    <Button variant="cta" className="w-full">
+                      Contact Us
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

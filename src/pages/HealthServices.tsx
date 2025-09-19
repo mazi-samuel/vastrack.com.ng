@@ -164,16 +164,16 @@ const HealthServices = () => {
                     Related Links
                   </h3>
                   <div className="space-y-3">
-                    <Link to="/banking-solutions" className="block text-primary hover:text-primary/80 transition-colors">
+                    <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors">
                       Banking Solutions
                     </Link>
-                    <Link to="/education-tools" className="block text-primary hover:text-primary/80 transition-colors">
+                    <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors">
                       Education Tools
                     </Link>
-                    <Link to="/technical-architecture" className="block text-primary hover:text-primary/80 transition-colors">
+                    <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors">
                       Technical Architecture
                     </Link>
-                    <Link to="/partnership-models" className="block text-primary hover:text-primary/80 transition-colors">
+                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors">
                       Partnership Models
                     </Link>
                   </div>

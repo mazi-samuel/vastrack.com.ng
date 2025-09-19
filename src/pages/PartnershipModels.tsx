@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, ArrowRight, Users, Handshake, TrendingUp, Building2, Globe, HeadphonesIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PartnershipModelsPage = () => {
   return (
@@ -207,40 +208,42 @@ const PartnershipModelsPage = () => {
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-8">
+          <div className="sticky top-8 space-y-8">
             {/* Related Links */}
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-teal-600 mb-4">Related Links</h3>
-                <div className="space-y-3">
-                  <a href="/banking-solutions" className="block text-teal-600 hover:text-teal-700 hover:underline">
-                    Banking Solutions
-                  </a>
-                  <a href="/health-services" className="block text-teal-600 hover:text-teal-700 hover:underline">
-                    Health Services
-                  </a>
-                  <a href="/education-tools" className="block text-teal-600 hover:text-teal-700 hover:underline">
-                    Education Tools
-                  </a>
-                  <a href="/technical-architecture" className="block text-teal-600 hover:text-teal-700 hover:underline">
-                    Technical Architecture
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">
+                Related Links
+              </h3>
+              <div className="space-y-3">
+                <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors">
+                  Banking Solutions
+                </Link>
+                <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors">
+                  Health Services
+                </Link>
+                <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors">
+                  Education Tools
+                </Link>
+                <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors">
+                  Technical Architecture
+                </Link>
+              </div>
+            </div>
 
             {/* Need Help */}
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-teal-600 mb-4">Need Help?</h3>
-                <p className="text-gray-600 mb-4">
-                  Contact our support team for assistance
-                </p>
-                <Button className="w-full bg-red-500 hover:bg-red-600 text-white">
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">
+                Need Help?
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Contact our support team for assistance
+              </p>
+              <Link to="/contact">
+                <Button variant="cta" className="w-full">
                   Contact Us
                 </Button>
-              </CardContent>
-            </Card>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
