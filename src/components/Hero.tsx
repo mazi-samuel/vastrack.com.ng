@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -45,43 +46,55 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 max-w-md sm:max-w-none mx-auto">
-            <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]">
-              Get Started Today
-            </Button>
-            <Button variant="hero" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]">
-              Learn More
-            </Button>
+            <Link to="/vas-solutions">
+              <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]">
+                Get Started Today
+              </Button>
+            </Link>
+            <Link to="/knowledge-hub">
+              <Button variant="hero" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
 
         {/* Floating service indicators */}
-        <div className="absolute inset-0 pointer-events-none hidden xl:block">
+        <div className="absolute inset-0 hidden xl:block">
           <div className="absolute top-1/4 left-10">
-            <div className="bg-card/10 backdrop-blur-sm border border-primary-glow/20 rounded-lg p-3 lg:p-4 text-center">
-              <div className="text-xl lg:text-2xl font-bold text-primary-glow">SMS</div>
-              <div className="text-xs lg:text-sm text-hero-foreground/80">Gateway</div>
-            </div>
+            <Link to="/sms-gateway" className="block">
+              <div className="bg-card/10 backdrop-blur-sm border border-primary-glow/20 rounded-lg p-3 lg:p-4 text-center hover:bg-card/20 hover:scale-105 transition-all duration-300 cursor-pointer">
+                <div className="text-xl lg:text-2xl font-bold text-primary-glow">SMS</div>
+                <div className="text-xs lg:text-sm text-hero-foreground/80">Gateway</div>
+              </div>
+            </Link>
           </div>
           
           <div className="absolute top-1/3 right-10">
-            <div className="bg-card/10 backdrop-blur-sm border border-primary-glow/20 rounded-lg p-3 lg:p-4 text-center">
-              <div className="text-xl lg:text-2xl font-bold text-primary-glow">USSD</div>
-              <div className="text-xs lg:text-sm text-hero-foreground/80">Services</div>
-            </div>
+            <Link to="/ussd-services" className="block">
+              <div className="bg-card/10 backdrop-blur-sm border border-primary-glow/20 rounded-lg p-3 lg:p-4 text-center hover:bg-card/20 hover:scale-105 transition-all duration-300 cursor-pointer">
+                <div className="text-xl lg:text-2xl font-bold text-primary-glow">USSD</div>
+                <div className="text-xs lg:text-sm text-hero-foreground/80">Services</div>
+              </div>
+            </Link>
           </div>
           
           <div className="absolute bottom-1/3 left-20">
-            <div className="bg-card/10 backdrop-blur-sm border border-primary-glow/20 rounded-lg p-3 lg:p-4 text-center">
-              <div className="text-xl lg:text-2xl font-bold text-primary-glow">IVR</div>
-              <div className="text-xs lg:text-sm text-hero-foreground/80">Solutions</div>
-            </div>
+            <Link to="/ivr-solutions" className="block">
+              <div className="bg-card/10 backdrop-blur-sm border border-primary-glow/20 rounded-lg p-3 lg:p-4 text-center hover:bg-card/20 hover:scale-105 transition-all duration-300 cursor-pointer">
+                <div className="text-xl lg:text-2xl font-bold text-primary-glow">IVR</div>
+                <div className="text-xs lg:text-sm text-hero-foreground/80">Solutions</div>
+              </div>
+            </Link>
           </div>
           
           <div className="absolute bottom-1/4 right-20">
-            <div className="bg-card/10 backdrop-blur-sm border border-primary-glow/20 rounded-lg p-3 lg:p-4 text-center">
-              <div className="text-xl lg:text-2xl font-bold text-primary-glow">Mobile</div>
-              <div className="text-xs lg:text-sm text-hero-foreground/80">Payments</div>
-            </div>
+            <Link to="/mobile-payments" className="block">
+              <div className="bg-card/10 backdrop-blur-sm border border-primary-glow/20 rounded-lg p-3 lg:p-4 text-center hover:bg-card/20 hover:scale-105 transition-all duration-300 cursor-pointer">
+                <div className="text-xl lg:text-2xl font-bold text-primary-glow">Mobile</div>
+                <div className="text-xs lg:text-sm text-hero-foreground/80">Payments</div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
