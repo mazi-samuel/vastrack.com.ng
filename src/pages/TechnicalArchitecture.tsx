@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Network, Database, Zap, Shield, Cpu, Link2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const TechnicalArchitecturePage = () => {
   return (
@@ -170,16 +171,16 @@ const TechnicalArchitecturePage = () => {
                     Related Links
                   </h3>
                   <div className="space-y-3">
-                    <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Banking Solutions
                     </Link>
-                    <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Health Services
                     </Link>
-                    <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Education Tools
                     </Link>
-                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Partnership Models
                     </Link>
                   </div>

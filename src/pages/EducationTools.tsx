@@ -180,16 +180,16 @@ const EducationTools = () => {
                     Related Links
                   </h3>
                   <div className="space-y-3">
-                    <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Banking Solutions
                     </Link>
-                    <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Health Services
                     </Link>
-                    <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Technical Architecture
                     </Link>
-                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Partnership Models
                     </Link>
                   </div>

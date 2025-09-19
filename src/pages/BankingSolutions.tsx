@@ -92,7 +92,7 @@ const BankingSolutions = () => {
                     {features.map((feature, index) => (
                       <div key={index} className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                        <span className="text-muted-foreground leading-relaxed">{feature}</span>
+                        <span className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: feature }} />
                       </div>
                     ))}
                   </div>
@@ -157,16 +157,16 @@ const BankingSolutions = () => {
                     Related Links
                   </h3>
                   <div className="space-y-3">
-                    <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Health Services
                     </Link>
-                    <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Education Tools
                     </Link>
-                    <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Technical Architecture
                     </Link>
-                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Partnership Models
                     </Link>
                   </div>

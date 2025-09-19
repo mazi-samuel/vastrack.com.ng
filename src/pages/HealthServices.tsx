@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 
 const HealthServices = () => {
   const features = [
-    "Secure & Compliant – HIPAA-compliant solutions ensuring data privacy and security.",
-    "Mobile & Web Integration – Accessible via USSD, SMS, mobile apps, and web platforms.",
-    "Seamless API Connectivity – Easily integrates with hospital systems, EMRs, and third-party platforms.",
-    "AI & Automation – Smart triage, automated reminders, and AI-driven diagnostics.",
-    "24/7 Patient Engagement – Remote healthcare access anytime, anywhere.",
-    "Scalable & Cost-Effective – Designed to meet the needs of hospitals, clinics, pharmacies, and NGOs."
+    "<strong>Secure & Compliant</strong> – HIPAA-compliant solutions ensuring data privacy and security.",
+    "<strong>Mobile & Web Integration</strong> – Accessible via USSD, SMS, mobile apps, and web platforms.",
+    "<strong>Seamless API Connectivity</strong> – Easily integrates with hospital systems, EMRs, and third-party platforms.",
+    "<strong>AI & Automation</strong> – Smart triage, automated reminders, and AI-driven diagnostics.",
+    "<strong>24/7 Patient Engagement</strong> – Remote healthcare access anytime, anywhere.",
+    "<strong>Scalable & Cost-Effective</strong> – Designed to meet the needs of hospitals, clinics, pharmacies, and NGOs."
   ];
 
   const services = [
@@ -99,7 +99,7 @@ const HealthServices = () => {
                     {features.map((feature, index) => (
                       <div key={index} className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                        <span className="text-muted-foreground leading-relaxed">{feature}</span>
+                        <span className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: feature }} />
                       </div>
                     ))}
                   </div>
@@ -164,16 +164,16 @@ const HealthServices = () => {
                     Related Links
                   </h3>
                   <div className="space-y-3">
-                    <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Banking Solutions
                     </Link>
-                    <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Education Tools
                     </Link>
-                    <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Technical Architecture
                     </Link>
-                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors">
+                    <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors duration-300">
                       Partnership Models
                     </Link>
                   </div>
