@@ -46,22 +46,22 @@ const Header = () => {
           {/* Desktop navigation */}
           <div className="hidden lg:flex items-center gap-8">
             <Link to="/" className="text-foreground hover:text-primary transition-colors">
-              Home
+              HOME
             </Link>
             <Link to="/about" className="text-foreground hover:text-primary transition-colors">
-              About Us
+              ABOUT US
             </Link>
             <Link to="/services" className="text-foreground hover:text-primary transition-colors">
-              Products & Services
+              PRODUCTS & SERVICES
             </Link>
             <Link to="/news-media" className="text-foreground hover:text-primary transition-colors">
-              News & Media
+              NEWS & MEDIA
             </Link>
             <Link to="/vas-solutions" className="text-foreground hover:text-primary transition-colors">
-              VAS Solutions
+              VAS SOLUTIONS
             </Link>
             <Link to="/resources" className="text-foreground hover:text-primary transition-colors">
-              Resource Centre
+              RESOURCE CENTRE
             </Link>
           </div>
 
@@ -69,7 +69,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <Link to="/contact">
               <Button variant="cta" className="hidden sm:flex">
-                Contact Us
+                CONTACT US
               </Button>
             </Link>
             
@@ -92,46 +92,46 @@ const Header = () => {
                 className="text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Home
+                HOME
               </Link>
               <Link
                 to="/about"
                 className="text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About Us
+                ABOUT US
               </Link>
               <Link
                 to="/services"
                 className="text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Products & Services
+                PRODUCTS & SERVICES
               </Link>
               <Link
                 to="/news-media"
                 className="text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                News & Media
+                NEWS & MEDIA
               </Link>
               <Link
                 to="/vas-solutions"
                 className="text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                VAS Solutions
+                VAS SOLUTIONS
               </Link>
               <Link
                 to="/resources"
                 className="text-foreground hover:text-primary transition-colors px-4 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Resource Centre
+                RESOURCE CENTRE
               </Link>
               <Link to="/contact">
                 <Button variant="cta" className="mx-4 mt-2">
-                  Contact Us
+                  CONTACT US
                 </Button>
               </Link>
             </div>
