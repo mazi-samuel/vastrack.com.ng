@@ -183,7 +183,7 @@ const OurApproach = () => {
                   <p className="text-sm md:text-base text-muted-foreground mb-4 leading-relaxed">
                     Contact our support team for assistance
                   </p>
-                  <Button asChild variant="default" size="sm" className="w-full">
+                  <Button asChild variant="cta" size="sm" className="w-full">
                     <Link to="/contact">
                       Contact Us
                     </Link>

@@ -24,6 +24,7 @@ import CaseStudies from "@/pages/CaseStudies";
 import KnowledgeHub from "@/pages/KnowledgeHub";
 import NCCDocumentation from "@/pages/NCCDocumentation";
 import OurApproach from "@/pages/OurApproach";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
