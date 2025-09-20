@@ -34,43 +34,43 @@ const Header = () => {
       </div>
 
       {/* Main navigation */}
-      <nav className="container mx-auto px-4 py-3 md:py-4">
+      <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src={vastrackLogo} 
               alt="Vastrack Technologies Logo" 
-              className="h-8 sm:h-10 md:h-12 w-auto"
+              className="h-10 w-auto"
             />
           </Link>
 
           {/* Desktop navigation */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-            <Link to="/" className="text-foreground hover:text-primary transition-colors text-sm xl:text-base">
+          <div className="hidden lg:flex items-center gap-8">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors">
               HOME
             </Link>
-            <Link to="/about" className="text-foreground hover:text-primary transition-colors text-sm xl:text-base">
+            <Link to="/about" className="text-foreground hover:text-primary transition-colors">
               ABOUT US
             </Link>
-            <Link to="/services" className="text-foreground hover:text-primary transition-colors text-sm xl:text-base">
+            <Link to="/services" className="text-foreground hover:text-primary transition-colors">
               PRODUCTS & SERVICES
             </Link>
-            <Link to="/news-media" className="text-foreground hover:text-primary transition-colors text-sm xl:text-base">
+            <Link to="/news-media" className="text-foreground hover:text-primary transition-colors">
               NEWS & MEDIA
             </Link>
-            <Link to="/vas-solutions" className="text-foreground hover:text-primary transition-colors text-sm xl:text-base">
+            <Link to="/vas-solutions" className="text-foreground hover:text-primary transition-colors">
               VAS SOLUTIONS
             </Link>
-            <Link to="/resources" className="text-foreground hover:text-primary transition-colors text-sm xl:text-base">
+            <Link to="/resources" className="text-foreground hover:text-primary transition-colors">
               RESOURCE CENTRE
             </Link>
           </div>
 
           {/* CTA Button and Mobile Menu */}
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-4">
             <Link to="/contact">
-              <Button variant="cta" className="hidden sm:flex text-sm md:text-base px-4 md:px-6">
+              <Button variant="cta" className="hidden sm:flex">
                 CONTACT US
               </Button>
             </Link>
@@ -78,8 +78,7 @@ const Header = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-md hover:bg-muted transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-              aria-label="Toggle menu"
+              className="lg:hidden p-2 rounded-md hover:bg-muted transition-colors"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
