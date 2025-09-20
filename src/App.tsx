@@ -23,6 +23,7 @@ import ResourceCentre from "@/pages/ResourceCentre";
 import CaseStudies from "@/pages/CaseStudies";
 import KnowledgeHub from "@/pages/KnowledgeHub";
 import NCCDocumentation from "@/pages/NCCDocumentation";
+import OurApproach from "@/pages/OurApproach";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/education-tools" element={<EducationTools />} />
           <Route path="/technical-architecture" element={<TechnicalArchitecture />} />
           <Route path="/partnership-models" element={<PartnershipModels />} />
+          <Route path="/our-approach" element={<OurApproach />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
