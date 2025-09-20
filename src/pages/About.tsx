@@ -114,65 +114,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Learn More About Us */}
-      <section className="py-12 md:py-16 lg:py-20" style={{ backgroundColor: 'white' }}>
-        <div className="container mx-auto px-4">
-          <div 
-            className="text-center mb-12 md:mb-16 p-6 md:p-8 rounded-2xl mx-auto max-w-4xl" 
-            style={{ backgroundColor: '#5cbc8c' }}
-          >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
-              Learn More About Us
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-white px-2">
-              Discover our methodology and meet the dedicated team driving innovation in telecommunications.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-            <div className="h-full">
-              <Link to="/our-approach" className="block h-full">
-                <div className="text-center group transition-all duration-300 hover:transform hover:scale-105 hover:-translate-y-1 cursor-pointer h-full">
-                  <div className="rounded-2xl p-6 md:p-8 transition-all duration-300 group-hover:shadow-xl shadow-lg h-full flex flex-col justify-center bg-white group-hover:bg-primary min-h-[280px]">
-                    <div className="bg-primary/10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:bg-white/20 transition-colors duration-300 flex-shrink-0">
-                      <MapPin 
-                        className="h-8 w-8 md:h-10 md:w-10 transition-colors duration-300 text-primary group-hover:text-white" 
-                      />
-                    </div>
-                    <h3 className="text-lg md:text-2xl font-semibold mb-2 md:mb-3 transition-colors duration-300 text-primary group-hover:text-white">
-                      Our Approach
-                    </h3>
-                    <p className="text-sm md:text-base leading-relaxed transition-colors duration-300 text-primary group-hover:text-white/90 px-2">
-                      Discover our proven methodology and strategic approach to delivering exceptional telecommunications solutions.
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-
-            <div className="h-full">
-              <Link to="/meet-the-team" className="block h-full">
-                <div className="text-center group transition-all duration-300 hover:transform hover:scale-105 hover:-translate-y-1 cursor-pointer h-full">
-                  <div className="rounded-2xl p-6 md:p-8 transition-all duration-300 group-hover:shadow-xl shadow-lg h-full flex flex-col justify-center bg-white group-hover:bg-primary min-h-[280px]">
-                    <div className="bg-primary/10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:bg-white/20 transition-colors duration-300 flex-shrink-0">
-                      <Users2 
-                        className="h-8 w-8 md:h-10 md:w-10 transition-colors duration-300 text-primary group-hover:text-white" 
-                      />
-                    </div>
-                    <h3 className="text-lg md:text-2xl font-semibold mb-2 md:mb-3 transition-colors duration-300 text-primary group-hover:text-white">
-                      Meet the Team
-                    </h3>
-                    <p className="text-sm md:text-base leading-relaxed transition-colors duration-300 text-primary group-hover:text-white/90 px-2">
-                      Get to know the talented professionals and visionary leaders behind Vastracktech's success.
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Mission & Vision */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
