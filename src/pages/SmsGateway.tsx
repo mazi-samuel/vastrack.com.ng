@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Zap, Globe, Shield, Code, TrendingUp, BarChart3, MessageSquare, Smartphone, Lock, Building, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/images/adem-ay-zs-41Br0WhQ-unsplash.jpg";
 
 const SmsGateway = () => {
   const features = [
@@ -90,8 +91,19 @@ const SmsGateway = () => {
       </section>
 
       {/* Hero Section */}
-      <section className="py-20 bg-hero text-hero-foreground">
-        <div className="container mx-auto px-6 lg:px-8">
+      <section 
+        className="relative py-20 bg-hero text-hero-foreground"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-hero/70"></div>
+        
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
               SMS Gateway — Seamless, Reliable, and Scalable Messaging Solutions
