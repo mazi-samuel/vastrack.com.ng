@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Network, Database, Zap, Shield, Cpu, Link2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/images/getty-images-FJiKLoADTpI-unsplash.jpg";
 
 const TechnicalArchitecturePage = () => {
   return (
@@ -11,11 +12,17 @@ const TechnicalArchitecturePage = () => {
       
       {/* Hero Section */}
       <section 
-        className="py-20 bg-cover bg-center bg-no-repeat relative"
+        className="relative py-20 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/src/assets/hero-bg.jpg')`
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}
       >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-hero/70"></div>
+        
         <div className="container mx-auto px-4 relative z-10">
           {/* Breadcrumb */}
           <div className="text-center mb-8">

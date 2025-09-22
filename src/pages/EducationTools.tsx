@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, MessageSquare, BookOpen, Video, Brain, Bell, Phone, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/images/desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg";
 
 const EducationTools = () => {
   return (
@@ -12,8 +13,18 @@ const EducationTools = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-hero text-hero-foreground relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section 
+        className="relative py-20 bg-hero text-hero-foreground overflow-hidden"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-hero/70"></div>
+        
         <div className="container mx-auto px-4 relative z-10">
           <nav className="flex items-center space-x-2 text-sm mb-8">
             <Link to="/" className="text-hero-foreground/80 hover:text-hero-foreground transition-colors">

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Shield, Smartphone, CreditCard, Users, Zap, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/images/getty-images-38HnYyZyVok-unsplash.jpg";
 
 const BankingSolutions = () => {
   const features = [
@@ -50,8 +51,19 @@ const BankingSolutions = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-hero text-hero-foreground">
-        <div className="container mx-auto px-4">
+      <section 
+        className="relative py-12 md:py-16 lg:py-20 bg-hero text-hero-foreground"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-hero/70"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Breadcrumb */}
             <div className="mb-4 md:mb-6">

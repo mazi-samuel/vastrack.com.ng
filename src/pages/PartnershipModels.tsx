@@ -4,14 +4,25 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, ArrowRight, Users, Handshake, TrendingUp, Building2, Globe, HeadphonesIcon } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/images/amina-atar-4mEyvORkbN0-unsplash.jpg";
 
 const PartnershipModelsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white py-32">
-        <div className="absolute inset-0 bg-black/50"></div>
+      <div 
+        className="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white py-32"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-hero/70"></div>
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm mb-8">
             <span className="text-gray-300">Home</span>

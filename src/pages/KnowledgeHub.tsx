@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Button } from "../components/ui/button";
+import heroImage from "@/assets/images/gabriella-clare-marino-GSLA0FVY9qI-unsplash.jpg";
 
 const KnowledgeHub = () => {
   return (
@@ -8,8 +9,18 @@ const KnowledgeHub = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-slate-900 to-slate-700 text-white py-24">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section 
+        className="relative bg-gradient-to-r from-slate-900 to-slate-700 text-white py-24"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-hero/70"></div>
+        
         <div className="container mx-auto px-6 relative z-10">
           <nav className="text-sm mb-8">
             <span className="text-gray-300">Home</span>

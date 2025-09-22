@@ -8,21 +8,21 @@ const Footer = () => {
       style={{ backgroundColor: '#0c0c0d' }}
     >
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 md:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
           {/* Company Info */}
-          <div className="sm:col-span-2 lg:col-span-1">
-            <div className="mb-4 md:mb-6">
+          <div className="md:col-span-2 lg:col-span-1 text-center md:text-left">
+            <div className="mb-4 md:mb-6 flex justify-center md:justify-start">
               <img 
                 src={vastrackLogo} 
                 alt="Vastrack Technologies Logo" 
                 className="h-10 md:h-12 w-auto"
               />
             </div>
-            <p className="text-white/80 leading-relaxed mb-4 md:mb-6 text-sm md:text-base">
+            <p className="text-white/80 leading-relaxed mb-4 md:mb-6 text-sm md:text-base max-w-xs mx-auto md:mx-0">
               Empowering businesses with cutting-edge Value-Added Services 
               that drive growth and enhance customer engagement.
             </p>
-            <div className="flex gap-3 md:gap-4">
+            <div className="flex gap-3 md:gap-4 justify-center md:justify-start">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer min-w-[40px] min-h-[40px]">
                 <Facebook className="h-4 w-4 md:h-5 md:w-5 text-white" />
               </div>
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-white">Quick Links</h3>
             <ul className="space-y-2 md:space-y-3">
               <li>
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-white">Our Services</h3>
             <ul className="space-y-2 md:space-y-3">
               <li className="text-white/80 text-sm md:text-base py-1">SMS Gateway</li>
@@ -77,26 +77,26 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="sm:col-span-2 lg:col-span-1 p-4 md:p-6 rounded-lg text-white" style={{ backgroundColor: '#0c0c0d' }}>
+          <div className="md:col-span-2 lg:col-span-1 p-4 md:p-6 rounded-lg text-white text-center md:text-left" style={{ backgroundColor: '#0c0c0d' }}>
             <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-white">Contact Info</h3>
             <div className="space-y-3 md:space-y-4">
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3 justify-center md:justify-start">
                 <MapPin className="h-4 w-4 md:h-5 md:w-5 text-white mt-1 flex-shrink-0" />
-                <span className="text-white text-sm md:text-base">
+                <span className="text-white text-sm md:text-base text-left">
                   4, Babatope Bejide Crescent,<br />
                   Lekki, Lagos, Nigeria
                 </span>
               </div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3 justify-center md:justify-start">
                 <Mail className="h-4 w-4 md:h-5 md:w-5 text-white mt-1 flex-shrink-0" />
                 <a 
                   href="mailto:tech@vastracktech.com.ng" 
-                  className="text-white hover:text-white/80 transition-colors text-sm md:text-base break-all"
+                  className="text-white hover:text-white/80 transition-colors text-sm md:text-base break-words text-left"
                 >
                   tech@vastracktech.com.ng
                 </a>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
                 <Phone className="h-4 w-4 md:h-5 md:w-5 text-white flex-shrink-0" />
                 <a 
                   href="tel:+2348160443352" 
