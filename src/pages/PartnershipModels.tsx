@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, ArrowRight, Users, Handshake, TrendingUp, Building2, Globe, HeadphonesIcon } from "lucide-react";
@@ -24,13 +25,14 @@ const PartnershipModelsPage = () => {
         <div className="absolute inset-0 bg-hero/70"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-sm mb-8">
-            <span className="text-gray-300">Home</span>
-            <span className="mx-2">/</span>
-            <span className="text-gray-300">VAS Solutions</span>
-            <span className="mx-2">/</span>
-            <span className="text-primary">Partnership Models</span>
-          </nav>
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "VAS Solutions", href: "/vas-solutions" },
+              { label: "Partnership Models", isActive: true }
+            ]}
+            className="mb-8"
+          />
           <h1 className="text-4xl md:text-5xl font-bold mb-6 max-w-4xl">
             Partnership Models – Driving Success Together Through Strategic Collaboration
           </h1>

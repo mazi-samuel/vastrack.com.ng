@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Card } from "@/components/ui/card";
 import { Building2, Heart, GraduationCap, Network, Handshake, Users } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -64,6 +65,12 @@ const VasSolutions = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "VAS Solutions", isActive: true }
+              ]}
+            />
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-2">
               VAS Solutions
             </h1>

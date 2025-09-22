@@ -479,9 +479,9 @@ This project is proprietary software owned by **Vastracktech Technologies**. All
 
 ### Development Team
 
-- **🔧 Technical Lead:** Samuel Mazi
-- **💼 Project Manager:** Vastracktech PM Team
-- **🎨 Design:** Vastracktech Design Team
+- **🔧 Technical Lead:** Oyelere Oluwabiyi
+- **💼 Project Manager:** John Edem
+- **🎨 Design and Developement:** Mazi Nwakaeze
 
 ---
 

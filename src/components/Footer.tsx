@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import vastrackLogo from "@/assets/vastrack-logo.png";
+import AnimatedSocialIcon from "./AnimatedSocialIcon";
 
 const Footer = () => {
   return (
@@ -23,18 +24,30 @@ const Footer = () => {
               that drive growth and enhance customer engagement.
             </p>
             <div className="flex gap-3 md:gap-4 justify-center md:justify-start">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer min-w-[40px] min-h-[40px]">
-                <Facebook className="h-4 w-4 md:h-5 md:w-5 text-white" />
-              </div>
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer min-w-[40px] min-h-[40px]">
-                <Twitter className="h-4 w-4 md:h-5 md:w-5 text-white" />
-              </div>
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer min-w-[40px] min-h-[40px]">
-                <Linkedin className="h-4 w-4 md:h-5 md:w-5 text-white" />
-              </div>
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer min-w-[40px] min-h-[40px]">
-                <Instagram className="h-4 w-4 md:h-5 md:w-5 text-white" />
-              </div>
+              <AnimatedSocialIcon
+                icon={Facebook}
+                href="https://web.facebook.com/vastracktech?_rdc=1&_rdr#"
+                label="Follow us on Facebook"
+                delay={0.1}
+              />
+              <AnimatedSocialIcon
+                icon={Twitter}
+                href="https://x.com/vastrack_tech"
+                label="Follow us on Twitter/X"
+                delay={0.2}
+              />
+              <AnimatedSocialIcon
+                icon={Linkedin}
+                href="https://www.linkedin.com/company/vastrack-tech/"
+                label="Connect with us on LinkedIn"
+                delay={0.3}
+              />
+              <AnimatedSocialIcon
+                icon={Instagram}
+                href="https://www.instagram.com/vastrack_tech/"
+                label="Follow us on Instagram"
+                delay={0.4}
+              />
             </div>
           </div>
 

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, MessageSquare, BookOpen, Video, Brain, Bell, Phone, Building2 } from "lucide-react";
@@ -26,17 +27,14 @@ const EducationTools = () => {
         <div className="absolute inset-0 bg-hero/70"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <nav className="flex items-center space-x-2 text-sm mb-8">
-            <Link to="/" className="text-hero-foreground/80 hover:text-hero-foreground transition-colors">
-              Home
-            </Link>
-            <span className="text-hero-foreground/60">/</span>
-            <Link to="/services" className="text-hero-foreground/80 hover:text-hero-foreground transition-colors">
-              VAS Solutions
-            </Link>
-            <span className="text-hero-foreground/60">/</span>
-            <span className="text-primary">Education Tools</span>
-          </nav>
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "VAS Solutions", href: "/services" },
+              { label: "Education Tools", isActive: true }
+            ]}
+            className="mb-8"
+          />
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
               Education Tools - Empowering Learning with Digital Innovation

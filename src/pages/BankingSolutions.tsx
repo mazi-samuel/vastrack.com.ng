@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Shield, Smartphone, CreditCard, Users, Zap, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -65,16 +66,13 @@ const BankingSolutions = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Breadcrumb */}
-            <div className="mb-4 md:mb-6">
-              <nav className="text-xs sm:text-sm text-hero-foreground/70">
-                <Link to="/" className="hover:text-hero-foreground transition-colors">Home</Link>
-                <span className="mx-2">/</span>
-                <Link to="/vas-solutions" className="hover:text-hero-foreground transition-colors">VAS Solutions</Link>
-                <span className="mx-2">/</span>
-                <span className="text-primary">Banking Solutions</span>
-              </nav>
-            </div>
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "VAS Solutions", href: "/vas-solutions" },
+                { label: "Banking Solutions", isActive: true }
+              ]}
+            />
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight px-2">
               Banking Solutions – Secure, Scalable<br className="hidden sm:block" />

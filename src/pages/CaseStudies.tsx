@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/images/adeniji-abdullahi-a-Bwie8Eo6Oes-unsplash.jpg";
 
@@ -22,13 +23,13 @@ const CaseStudies = () => {
         <div className="absolute inset-0 bg-hero/70"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <nav className="text-sm mb-6">
-            <span className="text-hero-foreground/70">Home</span>
-            <span className="mx-2 text-hero-foreground/70">/</span>
-            <span className="text-hero-foreground/70">Resource Centre</span>
-            <span className="mx-2 text-hero-foreground/70">/</span>
-            <span className="text-blue-300">Case Studies</span>
-          </nav>
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Resource Centre", href: "/resource-centre" },
+              { label: "Case Studies", isActive: true }
+            ]}
+          />
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
               Case Studies — Success Stories of Vastracktech VAS Solutions

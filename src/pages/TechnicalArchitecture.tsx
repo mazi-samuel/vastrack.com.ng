@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Network, Database, Zap, Shield, Cpu, Link2 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -24,12 +25,14 @@ const TechnicalArchitecturePage = () => {
         <div className="absolute inset-0 bg-hero/70"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          {/* Breadcrumb */}
-          <div className="text-center mb-8">
-            <p className="text-white/80 text-lg">
-              <span>Home</span> / <span>VAS Solutions</span> / <span className="text-[#5cbc8c]">Technical Architecture</span>
-            </p>
-          </div>
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "VAS Solutions", href: "/vas-solutions" },
+              { label: "Technical Architecture", isActive: true }
+            ]}
+            className="mb-8 text-center"
+          />
 
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">

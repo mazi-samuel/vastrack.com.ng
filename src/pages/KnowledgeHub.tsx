@@ -1,6 +1,7 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import { Button } from "../components/ui/button";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
+import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/images/gabriella-clare-marino-GSLA0FVY9qI-unsplash.jpg";
 
 const KnowledgeHub = () => {
@@ -22,13 +23,14 @@ const KnowledgeHub = () => {
         <div className="absolute inset-0 bg-hero/70"></div>
         
         <div className="container mx-auto px-6 relative z-10">
-          <nav className="text-sm mb-8">
-            <span className="text-gray-300">Home</span>
-            <span className="mx-2">/</span>
-            <span className="text-gray-300">Resource Centre</span>
-            <span className="mx-2">/</span>
-            <span className="text-blue-400">Knowledge Hub</span>
-          </nav>
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Resource Centre", href: "/resource-centre" },
+              { label: "Knowledge Hub", isActive: true }
+            ]}
+            className="mb-8"
+          />
           <h1 className="text-5xl font-bold mb-6">Knowledge Hub</h1>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -27,6 +28,12 @@ const Contact = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Contact Us", isActive: true }
+              ]}
+            />
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
               Contact Us
             </h1>

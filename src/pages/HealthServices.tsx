@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Shield, Smartphone, Heart, Users, Zap, Phone, Calendar, FileText, Activity, MessageSquare, Database } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -72,16 +73,13 @@ const HealthServices = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Breadcrumb */}
-            <div className="mb-6">
-              <nav className="text-sm text-hero-foreground/70">
-                <Link to="/" className="hover:text-hero-foreground transition-colors">Home</Link>
-                <span className="mx-2">/</span>
-                <Link to="/vas-solutions" className="hover:text-hero-foreground transition-colors">VAS Solutions</Link>
-                <span className="mx-2">/</span>
-                <span className="text-primary">Health Services</span>
-              </nav>
-            </div>
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "VAS Solutions", href: "/vas-solutions" },
+                { label: "Health Services", isActive: true }
+              ]}
+            />
             
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Health Services – Transforming<br />

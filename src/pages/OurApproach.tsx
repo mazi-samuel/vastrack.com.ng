@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Lightbulb, Zap, Target, Recycle } from "lucide-react";
@@ -55,16 +56,14 @@ const OurApproach = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Breadcrumb */}
-            <div className="mb-4 md:mb-6">
-              <nav className="text-xs sm:text-sm text-hero-foreground/70">
-                <Link to="/" className="hover:text-hero-foreground transition-colors">Home</Link>
-                <span className="mx-2">/</span>
-                <Link to="/about" className="hover:text-hero-foreground transition-colors">About Us</Link>
-                <span className="mx-2">/</span>
-                <span className="text-primary">Our Approach</span>
-              </nav>
-            </div>
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "About Us", href: "/about" },
+                { label: "Our Approach", isActive: true }
+              ]}
+              className="mb-4 md:mb-6"
+            />
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight px-2">
               Our Approach

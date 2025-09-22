@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Shield, TrendingUp, Clock, Code } from "lucide-react";
+import AnimatedIcon from "./AnimatedIcon";
+import { motion } from "framer-motion";
 
 const WhyChoose = () => {
   const features = [
@@ -41,20 +43,34 @@ const WhyChoose = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <Card 
-              key={index} 
-              className="p-8 text-center hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-muted border-0"
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
             >
-              <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <feature.icon className="h-10 w-10 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-foreground">
-                {feature.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {feature.description}
-              </p>
-            </Card>
+              <Card 
+                className="p-8 text-center hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-muted border-0 group"
+              >
+                <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                  <AnimatedIcon
+                    icon={feature.icon}
+                    size={40}
+                    className="text-primary"
+                    animationType="pulse"
+                    hoverType="glow"
+                    delay={index * 0.3}
+                  />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-foreground">
+                  {feature.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {feature.description}
+                </p>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

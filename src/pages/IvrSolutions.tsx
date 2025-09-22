@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Zap, Headphones, Shield, Users, Languages, Link2, Share2, BarChart3, Phone, Database, ShoppingCart, MessageCircle, Lock, FileText } from "lucide-react";
@@ -106,19 +107,6 @@ const IvrSolutions = () => {
     <div className="min-h-screen">
       <Header />
 
-      {/* Breadcrumb */}
-      <section className="py-4 bg-muted/30">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex items-center text-sm text-muted-foreground">
-            <Link to="/" className="hover:text-primary">Home</Link>
-            <span className="mx-2">/</span>
-            <Link to="/services" className="hover:text-primary">Products & Services</Link>
-            <span className="mx-2">/</span>
-            <span className="text-primary">IVR Solutions</span>
-          </div>
-        </div>
-      </section>
-
       {/* Hero Section */}
       <section 
         className="relative py-20 bg-hero text-hero-foreground"
@@ -134,6 +122,13 @@ const IvrSolutions = () => {
         
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Products & Services", href: "/services" },
+                { label: "IVR Solutions", isActive: true }
+              ]}
+            />
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
               IVR Solutions — Smarter Customer Connections
             </h1>

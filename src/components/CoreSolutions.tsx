@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { MessageSquare, Smartphone, Phone, CreditCard } from "lucide-react";
+import AnimatedIcon from "./AnimatedIcon";
+import { motion } from "framer-motion";
 
 const CoreSolutions = () => {
   const solutions = [
@@ -38,20 +40,34 @@ const CoreSolutions = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {solutions.map((solution, index) => (
-            <Card 
-              key={index} 
-              className="p-6 md:p-8 text-center hover:shadow-card transition-all duration-300 hover:scale-105 bg-gradient-card border-0 min-h-[280px] flex flex-col"
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="bg-gradient-primary w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 flex-shrink-0">
-                <solution.icon className="h-6 w-6 md:h-8 md:w-8 text-primary-foreground" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-primary flex-shrink-0">
-                {solution.title}
-              </h3>
-              <p className="text-sm md:text-base text-muted-foreground leading-relaxed flex-grow">
+              <Card 
+                className="p-6 md:p-8 text-center hover:shadow-card transition-all duration-300 hover:scale-105 bg-gradient-card border-0 min-h-[280px] flex flex-col group"
+              >
+                <div className="bg-gradient-primary w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 flex-shrink-0">
+                  <AnimatedIcon
+                    icon={solution.icon}
+                    size={32}
+                    className="text-primary-foreground"
+                    animationType="float"
+                    hoverType="bounce"
+                    delay={index * 0.2}
+                  />
+                </div>
+                <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-primary flex-shrink-0">
+                  {solution.title}
+                </h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed flex-grow">
                 {solution.description}
               </p>
             </Card>
+            </motion.div>
           ))}
         </div>
       </div>
