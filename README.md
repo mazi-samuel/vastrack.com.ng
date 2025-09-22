@@ -485,6 +485,6 @@ This project is proprietary software owned by **Vastracktech Technologies**. All
 
 ---
 
-### 🌟 **Built with ❤️ by Vastracktech Technologies**
+### 🌟 **Built by Vastracktech Technologies**
 
 *Transforming Nigeria's telecommunications landscape, one solution at a time.*
