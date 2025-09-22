@@ -6,6 +6,14 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
+import heroImage from "@/assets/images/rich-tervet-i8r3Kt2-mr8-unsplash.jpg";
+import fiveGImage from "@/assets/images/markus-winkler-QxZWOjp2jZQ-unsplash.jpg";
+import nccImage from "@/assets/images/NCC.jpeg";
+import partnershipImage from "@/assets/images/curated-lifestyle-FNQaITPFg5c-unsplash.jpg";
+import vasRevenueImage from "@/assets/images/allison-saeng-di9INIIhvj8-unsplash.jpg";
+import ceoVideoImage from "@/assets/images/ngozi-ejionueme-fCkpkEZzoaw-unsplash.jpg";
+import smsGatewayImage from "@/assets/images/brett-jordan-LPZy4da9aRo-unsplash.jpg";
+import mobileMoneyImage from "@/assets/images/random-institute-v0l4L1DfAbw-unsplash.jpg";
 
 const NewsMediaPage = () => {
   const newsItems = [
@@ -14,7 +22,7 @@ const NewsMediaPage = () => {
       title: "NCC Code of Practice Compliance: Moblogic Technologies Individual Code of Practice",
       excerpt: "Complete regulatory documentation in compliance with Nigerian Communications Commission Code of Practice Regulations 2024, outlining Value Added Services provided through short code numbers 7143, 20105 and 20106.",
       date: "September 12, 2024",
-      image: "/placeholder.svg",
+      image: nccImage,
       category: "Regulatory",
       featured: true,
       isDocument: true,
@@ -25,7 +33,7 @@ const NewsMediaPage = () => {
       title: "5G Network Infrastructure: Transforming Nigeria's Digital Landscape",
       excerpt: "Explore how 5G technology is revolutionizing telecommunications and creating new opportunities for businesses across Nigeria. This comprehensive analysis covers the implementation challenges, opportunities, and future prospects of 5G deployment in West Africa.",
       date: "September 10, 2024",
-      image: "/placeholder.svg",
+      image: fiveGImage,
       category: "Technology"
     },
     {
@@ -33,7 +41,7 @@ const NewsMediaPage = () => {
       title: "Vastrack Technologies Partners with Leading Telecom Providers",
       excerpt: "Strategic partnerships announced to expand VAS solutions and enhance customer experience across multiple networks.",
       date: "September 5, 2024",
-      image: "/placeholder.svg",
+      image: partnershipImage,
       category: "Business"
     },
     {
@@ -41,7 +49,7 @@ const NewsMediaPage = () => {
       title: "Digital Transformation in African Telecommunications",
       excerpt: "Watch our CEO discuss the future of telecom services and how value-added solutions are driving innovation.",
       date: "August 28, 2024",
-      image: "/placeholder.svg",
+      image: ceoVideoImage,
       category: "Interview",
       isVideo: true
     },
@@ -50,7 +58,7 @@ const NewsMediaPage = () => {
       title: "VAS Solutions: Driving Revenue Growth for Telecom Operators",
       excerpt: "An in-depth look at how Value-Added Services are creating new revenue streams and improving customer engagement.",
       date: "August 20, 2024",
-      image: "/placeholder.svg",
+      image: vasRevenueImage,
       category: "Technology"
     },
     {
@@ -58,7 +66,7 @@ const NewsMediaPage = () => {
       title: "Successful SMS Gateway Implementation for Financial Services",
       excerpt: "How we helped a leading financial institution streamline their customer communications with our SMS solutions.",
       date: "August 15, 2024",
-      image: "/placeholder.svg",
+      image: smsGatewayImage,
       category: "Case Study"
     },
     {
@@ -66,7 +74,7 @@ const NewsMediaPage = () => {
       title: "The Future of Mobile Money in Nigeria",
       excerpt: "Exploring the growth potential and technological innovations shaping the mobile financial services landscape.",
       date: "August 10, 2024",
-      image: "/placeholder.svg",
+      image: mobileMoneyImage,
       category: "Finance"
     }
   ];
@@ -78,8 +86,19 @@ const NewsMediaPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-hero-bg to-hero-bg/80 py-20">
-        <div className="container mx-auto px-4">
+      <section 
+        className="relative bg-gradient-to-r from-hero-bg to-hero-bg/80 py-20"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-hero/70"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-hero-foreground mb-6">
               News & Media

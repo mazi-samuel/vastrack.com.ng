@@ -1,7 +1,7 @@
-import mtnLogo from "./images/MTN-ICON2.png";
-import airtelLogo from "./images/AIRTEL-ICON2.png";
-import gloLogo from "./images/glo-icon.png";
-import nineMobileLogo from "./images/9mobil-icon.png";
+import mtnLogo from "@/assets/images/MTN-ICON2.png";
+import airtelLogo from "@/assets/images/AIRTEL-ICON2.png";
+import gloLogo from "@/assets/images/glo-icon.png";
+import nineMobileLogo from "@/assets/images/9mobil-icon.png";
 
 const Partners = () => {
   const partners = [

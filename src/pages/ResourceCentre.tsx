@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookOpen, FileText, Users, TrendingUp, Download, Video, HelpCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/images/2h-media-JRmWH53zwxw-unsplash.jpg";
 
 const ResourceCentre = () => {
   const resourceOptions = [
@@ -129,8 +130,19 @@ const ResourceCentre = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-hero text-hero-foreground">
-        <div className="container mx-auto px-4">
+      <section 
+        className="relative py-20 bg-hero text-hero-foreground"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-hero/70"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
               Resource Centre

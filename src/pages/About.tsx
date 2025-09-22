@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Users, Target, Award, Globe, MapPin, Users2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/images/curated-lifestyle-A8VbOXXiXO8-unsplash.jpg";
 
 const About = () => {
   const values = [
@@ -33,8 +34,19 @@ const About = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-hero text-hero-foreground">
-        <div className="container mx-auto px-4">
+      <section 
+        className="relative py-20 bg-hero text-hero-foreground"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-hero/70"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
               About Vastracktech
