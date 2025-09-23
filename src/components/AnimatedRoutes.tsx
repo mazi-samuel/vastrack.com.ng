@@ -6,6 +6,7 @@ import PageTransition from './PageTransition';
 // Import all pages
 import Index from '@/pages/Index';
 import About from '@/pages/About';
+import MeetTheTeam from '@/pages/MeetTheTeam';
 import Services from '@/pages/Services';
 import Contact from '@/pages/Contact';
 import VasSolutions from '@/pages/VasSolutions';
@@ -32,7 +33,7 @@ const AnimatedRoutes: React.FC = () => {
   // Define animation types for different page categories
   const getAnimationType = (pathname: string): 'fade' | 'slide' | 'scale' | 'flip' => {
     // Main pages - fade transitions
-    if (['/about', '/services', '/contact', '/'].includes(pathname)) {
+    if (['/about', '/services', '/contact', '/meet-the-team', '/'].includes(pathname)) {
       return 'fade';
     }
     
@@ -68,6 +69,7 @@ const AnimatedRoutes: React.FC = () => {
         <Routes location={location}>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/meet-the-team" element={<MeetTheTeam />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/vas-solutions" element={<VasSolutions />} />

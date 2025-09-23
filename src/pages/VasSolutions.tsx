@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import AnimatedIcon from "@/components/AnimatedIcon";
 import { Card } from "@/components/ui/card";
 import { Building2, Heart, GraduationCap, Network, Handshake, Users } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -105,8 +106,13 @@ const VasSolutions = () => {
                     <div className="rounded-2xl p-6 md:p-8 transition-all duration-300 group-hover:shadow-xl shadow-lg h-full flex flex-col justify-between bg-white group-hover:bg-primary min-h-[280px]">
                       <div className="flex flex-col items-center flex-1">
                         <div className="bg-primary/10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:bg-white/20 transition-colors duration-300 flex-shrink-0">
-                          <solution.icon 
-                            className="h-8 w-8 md:h-10 md:w-10 transition-colors duration-300 text-primary group-hover:text-white" 
+                          <AnimatedIcon 
+                            icon={solution.icon}
+                            size={32}
+                            className="transition-colors duration-300 text-primary group-hover:text-white" 
+                            animationType="wiggle"
+                            hoverType="bounce"
+                            delay={index * 0.2}
                           />
                         </div>
                         <h3 className="text-lg md:text-2xl font-semibold mb-2 md:mb-3 transition-colors duration-300 text-primary group-hover:text-white">
@@ -124,8 +130,13 @@ const VasSolutions = () => {
                     <div className="text-center group transition-all duration-300 hover:transform hover:scale-105 hover:-translate-y-1 cursor-pointer h-full">
                       <div className="rounded-2xl p-6 md:p-8 transition-all duration-300 group-hover:shadow-xl shadow-lg h-full flex flex-col justify-center bg-white group-hover:bg-primary min-h-[280px]">
                         <div className="bg-primary/10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:bg-white/20 transition-colors duration-300 flex-shrink-0">
-                          <solution.icon 
-                            className="h-8 w-8 md:h-10 md:w-10 transition-colors duration-300 text-primary group-hover:text-white" 
+                          <AnimatedIcon 
+                            icon={solution.icon}
+                            size={32}
+                            className="transition-colors duration-300 text-primary group-hover:text-white" 
+                            animationType="pulse"
+                            hoverType="spin"
+                            delay={index * 0.2}
                           />
                         </div>
                         <h3 className="text-lg md:text-2xl font-semibold mb-2 md:mb-3 transition-colors duration-300 text-primary group-hover:text-white">

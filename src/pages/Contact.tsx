@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import AnimatedIcon from "@/components/AnimatedIcon";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -149,7 +150,13 @@ const Contact = () => {
               <Card className="p-6 border-0 text-white" style={{ backgroundColor: '#5cbc8c' }}>
                 <div className="flex items-center gap-4 mb-4">
                   <div className="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-white" />
+                    <AnimatedIcon 
+                      icon={MapPin} 
+                      size={24} 
+                      className="text-white" 
+                      animationType="float"
+                      hoverType="bounce"
+                    />
                   </div>
                   <div>
                     <h3 className="font-semibold text-white">Office Address</h3>
@@ -164,7 +171,13 @@ const Contact = () => {
               <Card className="p-6 border-0 bg-gradient-card">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-primary" />
+                    <AnimatedIcon 
+                      icon={Mail} 
+                      size={24} 
+                      className="text-primary" 
+                      animationType="pulse"
+                      hoverType="glow"
+                    />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Email</h3>
@@ -181,7 +194,13 @@ const Contact = () => {
               <Card className="p-6 border-0 bg-gradient-card">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-primary" />
+                    <AnimatedIcon 
+                      icon={Phone} 
+                      size={24} 
+                      className="text-primary" 
+                      animationType="wiggle"
+                      hoverType="bounce"
+                    />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Phone</h3>
@@ -198,7 +217,14 @@ const Contact = () => {
               <Card className="p-6 border-0 bg-gradient-card">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center">
-                    <Clock className="h-6 w-6 text-primary" />
+                    <AnimatedIcon 
+                      icon={Clock} 
+                      size={24} 
+                      className="text-primary" 
+                      animationType="spin"
+                      hoverType="scale"
+                      duration={8}
+                    />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Business Hours</h3>

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import AnimatedIcon from "@/components/AnimatedIcon";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Zap, Globe, Shield, Code, TrendingUp, BarChart3, MessageSquare, Smartphone, Lock, Building, Mail } from "lucide-react";
@@ -187,7 +188,13 @@ const SmsGateway = () => {
                   <div className="space-y-4">
                     {useCase.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <AnimatedIcon 
+                          icon={CheckCircle} 
+                          size={20} 
+                          className="text-primary flex-shrink-0" 
+                          animationType="none"
+                          hoverType="bounce"
+                        />
                         <span className="text-muted-foreground">{feature}</span>
                       </div>
                     ))}

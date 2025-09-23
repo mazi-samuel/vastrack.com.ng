@@ -23,14 +23,15 @@ const CaseStudies = () => {
         <div className="absolute inset-0 bg-hero/70"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <Breadcrumb
-            items={[
-              { label: "Home", href: "/" },
-              { label: "Resource Centre", href: "/resource-centre" },
-              { label: "Case Studies", isActive: true }
-            ]}
-          />
           <div className="max-w-4xl mx-auto text-center">
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Resource Centre", href: "/resource-centre" },
+                { label: "Case Studies", isActive: true }
+              ]}
+              className="mb-8"
+            />
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
               Case Studies — Success Stories of Vastracktech VAS Solutions
             </h1>

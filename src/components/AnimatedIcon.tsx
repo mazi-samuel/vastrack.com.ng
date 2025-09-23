@@ -6,10 +6,12 @@ interface AnimatedIconProps {
   icon: LucideIcon;
   size?: number;
   className?: string;
-  animationType?: 'bounce' | 'spin' | 'pulse' | 'wiggle' | 'float' | 'glow' | 'scale';
-  hoverType?: 'lift' | 'spin' | 'scale' | 'glow' | 'bounce' | 'wiggle';
+  animationType?: 'bounce' | 'spin' | 'pulse' | 'wiggle' | 'float' | 'glow' | 'scale' | 'heartbeat' | 'shake' | 'swing' | 'tada' | 'none';
+  hoverType?: 'lift' | 'spin' | 'scale' | 'glow' | 'bounce' | 'wiggle' | 'rotate' | 'flip' | 'zoom' | 'none';
   delay?: number;
   duration?: number;
+  color?: string;
+  glowColor?: string;
 }
 
 const AnimatedIcon: React.FC<AnimatedIconProps> = ({
@@ -19,7 +21,9 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({
   animationType = 'none',
   hoverType = 'scale',
   delay = 0,
-  duration = 2
+  duration = 2,
+  color,
+  glowColor = 'rgba(92, 188, 140, 0.5)'
 }) => {
   const getBaseAnimation = () => {
     const easing = "easeInOut" as const;
@@ -81,7 +85,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({
         return {
           filter: [
             "drop-shadow(0 0 0px rgba(92, 188, 140, 0))",
-            "drop-shadow(0 0 10px rgba(92, 188, 140, 0.5))",
+            `drop-shadow(0 0 10px ${glowColor})`,
             "drop-shadow(0 0 0px rgba(92, 188, 140, 0))"
           ],
           transition: {
@@ -101,6 +105,51 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({
             delay
           }
         };
+      case 'heartbeat':
+        return {
+          scale: [1, 1.3, 1, 1.3, 1],
+          transition: {
+            duration: 1.5,
+            repeat: Infinity,
+            ease: easing,
+            delay,
+            repeatDelay: 2
+          }
+        };
+      case 'shake':
+        return {
+          x: [0, -3, 3, -3, 0],
+          transition: {
+            duration: 0.5,
+            repeat: Infinity,
+            repeatDelay: 4,
+            ease: easing,
+            delay
+          }
+        };
+      case 'swing':
+        return {
+          rotate: [0, 15, -10, 5, -5, 0],
+          transition: {
+            duration: 2,
+            repeat: Infinity,
+            ease: easing,
+            delay,
+            repeatDelay: 3
+          }
+        };
+      case 'tada':
+        return {
+          scale: [1, 0.9, 1.1, 1.1, 1],
+          rotate: [0, -3, 3, -3, 0],
+          transition: {
+            duration: 1,
+            repeat: Infinity,
+            ease: easing,
+            delay,
+            repeatDelay: 5
+          }
+        };
       default:
         return {};
     }
@@ -113,11 +162,13 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({
       case 'lift':
         return {
           y: -3,
+          scale: 1.05,
           transition: { duration: 0.2, ease: easing }
         };
       case 'spin':
         return {
           rotate: 180,
+          scale: 1.1,
           transition: { duration: 0.3, ease: easing }
         };
       case 'scale':
@@ -127,19 +178,40 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({
         };
       case 'glow':
         return {
-          filter: "drop-shadow(0 0 8px rgba(92, 188, 140, 0.6))",
+          filter: `drop-shadow(0 0 8px ${glowColor})`,
+          scale: 1.1,
           transition: { duration: 0.2, ease: easing }
         };
       case 'bounce':
         return {
           y: [-2, -8, -2],
+          scale: 1.1,
           transition: { duration: 0.4, ease: easing }
         };
       case 'wiggle':
         return {
           rotate: [0, -10, 10, -10, 0],
+          scale: 1.05,
           transition: { duration: 0.4, ease: easing }
         };
+      case 'rotate':
+        return {
+          rotate: 360,
+          transition: { duration: 0.6, ease: easing }
+        };
+      case 'flip':
+        return {
+          rotateY: 180,
+          scale: 1.1,
+          transition: { duration: 0.4, ease: easing }
+        };
+      case 'zoom':
+        return {
+          scale: 1.3,
+          transition: { duration: 0.2, ease: easing }
+        };
+      case 'none':
+        return {};
       default:
         return {
           scale: 1.1,
@@ -153,10 +225,12 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({
       className={`inline-block ${className}`}
       animate={getBaseAnimation()}
       whileHover={getHoverAnimation()}
+      whileTap={{ scale: 0.95 }}
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3, delay: delay * 0.1 }}
+      style={{ color }}
     >
       <Icon size={size} />
     </motion.div>

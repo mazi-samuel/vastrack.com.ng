@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import AnimatedIcon from "./AnimatedIcon";
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import vastrackLogo from "@/assets/vastrack-logo.png";
@@ -80,7 +81,21 @@ const Header = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden p-2 rounded-md hover:bg-muted transition-colors"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <AnimatedIcon 
+                  icon={X} 
+                  size={24} 
+                  animationType="none"
+                  hoverType="rotate"
+                />
+              ) : (
+                <AnimatedIcon 
+                  icon={Menu} 
+                  size={24} 
+                  animationType="none"
+                  hoverType="wiggle"
+                />
+              )}
             </button>
           </div>
         </div>

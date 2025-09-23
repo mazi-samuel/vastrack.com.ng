@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import AnimatedIcon from "@/components/AnimatedIcon";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MessageSquare, Smartphone, Phone, CreditCard, CheckCircle } from "lucide-react";
@@ -119,7 +120,14 @@ const Services = () => {
               <div key={index} className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                 <div className={`px-4 lg:px-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="bg-gradient-primary w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                    <service.icon className="h-8 w-8 text-primary-foreground" />
+                    <AnimatedIcon 
+                      icon={service.icon} 
+                      size={32} 
+                      className="text-primary-foreground" 
+                      animationType="pulse"
+                      hoverType="spin"
+                      delay={index * 0.3}
+                    />
                   </div>
                   <h2 className="text-4xl font-bold mb-6 text-foreground">
                     {service.title}
@@ -155,7 +163,14 @@ const Services = () => {
                   <div className="space-y-4">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <AnimatedIcon 
+                          icon={CheckCircle} 
+                          size={20} 
+                          className="text-primary flex-shrink-0" 
+                          animationType="none"
+                          hoverType="bounce"
+                          delay={featureIndex * 0.1}
+                        />
                         <span className="text-muted-foreground">{feature}</span>
                       </div>
                     ))}
