@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import AnimatedIcon from "@/components/AnimatedIcon";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Zap, Headphones, Shield, Users, Languages, Link2, Share2, BarChart3, Phone, Database, ShoppingCart, MessageCircle, Lock, FileText } from "lucide-react";
@@ -130,25 +131,14 @@ const IvrSolutions = () => {
               ]}
             />
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              IVR Solutions — Smarter Customer Connections
+              IVR Solutions: Smarter Customer Connections
             </h1>
             <p className="text-xl text-hero-foreground/90 leading-relaxed mb-8">
-              At Vastracktech, we build intelligent Interactive Voice Response (IVR) systems that transform how you connect with your customers. Our solutions help businesses, banks, healthcare providers, and government agencies automate conversations, provide instant support, and guide users to the right information—all through a simple phone call.
+              At Vastracktech, we build intelligent Interactive Voice Response (IVR) systems that transform how you connect with your customers. Our solutions help businesses, banks, healthcare providers, and government agencies automate conversations, provide instant support, and guide users to the right information, all through a simple phone call.
             </p>
-            <Button variant="cta" size="lg" asChild>
+            <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]" asChild>
               <Link to="/contact">Get Started Today</Link>
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Introduction */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              The result is a significant reduction in operational costs and a major boost in customer satisfaction. Move beyond the basic phone tree—create sophisticated, voice-driven workflows that truly meet your business needs and exceed customer expectations.
-            </p>
           </div>
         </div>
       </section>
@@ -169,7 +159,13 @@ const IvrSolutions = () => {
             {features.map((feature, index) => (
               <Card key={index} className="p-8 bg-muted border-0 hover:shadow-card transition-all duration-300 hover:-translate-y-2">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <feature.icon className="h-8 w-8 text-primary" />
+                  <AnimatedIcon 
+                    icon={feature.icon} 
+                    size={32} 
+                    className="text-primary" 
+                    animationType="bounce" 
+                    hoverType="scale"
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-foreground">
                   {feature.title}
@@ -188,7 +184,7 @@ const IvrSolutions = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Tailored Solutions for Your Industry
+              Tailored Solutions for Your <span className="text-primary">Industry</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Our flexible technology is powering better customer experiences across sectors:
@@ -200,7 +196,13 @@ const IvrSolutions = () => {
               <div key={index} className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                 <div className={`px-4 lg:px-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="bg-gradient-primary w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                    <industry.icon className="h-8 w-8 text-primary-foreground" />
+                    <AnimatedIcon 
+                      icon={industry.icon} 
+                      size={32} 
+                      className="text-primary-foreground" 
+                      animationType="pulse" 
+                      hoverType="bounce"
+                    />
                   </div>
                   <h3 className="text-3xl font-bold mb-6 text-foreground">
                     {industry.title}
@@ -232,7 +234,7 @@ const IvrSolutions = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Powered by Advanced Technology
+              Powered by Advanced <span className="text-primary">Technology</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Behind every interaction is a suite of powerful features:
@@ -243,7 +245,13 @@ const IvrSolutions = () => {
             {techFeatures.map((feature, index) => (
               <Card key={index} className="p-8 bg-muted border-0 hover:shadow-card transition-all duration-300 hover:-translate-y-2">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="h-8 w-8 text-primary" />
+                  <AnimatedIcon 
+                    icon={feature.icon} 
+                    size={32} 
+                    className="text-primary" 
+                    animationType="float" 
+                    hoverType="glow"
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-foreground">
                   {feature.title}
@@ -258,13 +266,13 @@ const IvrSolutions = () => {
       </section>
 
       {/* Ready to Build a Smarter Customer Experience? */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Ready to Build a Smarter Customer Experience?
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
+              Ready to Build a Smarter <span className="text-primary">Customer Experience</span>?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
               Let's talk about how we can elevate your communication strategy. Contact us today to get started.
             </p>
           </div>
@@ -284,23 +292,43 @@ const IvrSolutions = () => {
       </section>
 
       {/* Related Links Sidebar */}
-      <section className="py-16 bg-secondary/30">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-md ml-auto">
-            <h3 className="text-2xl font-bold mb-6 text-primary">Related Links</h3>
-            <div className="space-y-4">
-              <Link to="/sms-gateway" className="block text-primary hover:text-primary-glow transition-colors">
-                SMS Gateway
-              </Link>
-              <Link to="/ussd-services" className="block text-primary hover:text-primary-glow transition-colors">
-                USSD Services
-              </Link>
-              <Link to="/services" className="block text-primary hover:text-primary-glow transition-colors">
-                All Services
-              </Link>
-              <Link to="/contact" className="block text-primary hover:text-primary-glow transition-colors">
-                Contact Support
-              </Link>
+          <div className="max-w-md mx-auto">
+            <div className="bg-muted/30 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+              <h3 className="text-xl font-bold mb-6 text-primary border-b-2 border-primary pb-3">Related Links</h3>
+              <div className="space-y-3">
+                <Link to="/sms-gateway" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">SMS Gateway</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link to="/ussd-services" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">USSD Services</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link to="/mobile-payments" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">Mobile Payments</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link to="/services" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">All Services</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link to="/contact" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">Contact Support</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

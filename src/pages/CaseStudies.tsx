@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/images/adeniji-abdullahi-a-Bwie8Eo6Oes-unsplash.jpg";
 
 const CaseStudies = () => {
@@ -22,7 +23,7 @@ const CaseStudies = () => {
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-hero/70"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Breadcrumb
               items={[
@@ -30,23 +31,22 @@ const CaseStudies = () => {
                 { label: "Resource Centre", href: "/resource-centre" },
                 { label: "Case Studies", isActive: true }
               ]}
-              className="mb-8"
             />
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-              Case Studies — Success Stories of Vastracktech VAS Solutions
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+              Case Studies: Success Stories of Vastracktech VAS Solutions
             </h1>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid lg:grid-cols-4 gap-8">
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-4 gap-12">
               {/* Main Content */}
               <div className="lg:col-span-3">
-                <div className="bg-muted/50 p-8 rounded-lg mb-8">
+                <div className="bg-muted/30 p-6 md:p-8 rounded-lg mb-12">
                   <p className="text-lg leading-relaxed text-muted-foreground">
                     At Vastracktech, our greatest pride comes from seeing our solutions make a real difference for our clients. 
                     We don't just provide technology; we partner with businesses to solve complex challenges and drive tangible growth. 
@@ -56,10 +56,10 @@ const CaseStudies = () => {
 
                 {/* Case Study 1 */}
                 <div className="mb-16">
-                  <h2 className="text-4xl font-bold mb-6 text-foreground">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
                     Case Study 1: Bringing Mobile Payments to Every Corner of Africa
                   </h2>
-                  <div className="border-l-4 border-primary pl-6 space-y-4">
+                  <div className="border-l-4 border-primary pl-8 space-y-6 bg-muted/20 p-6 rounded-r-lg">
                     <div>
                       <span className="font-semibold text-foreground">Client:</span>
                       <span className="ml-2 text-muted-foreground">A Major African Telecom Operator</span>
@@ -67,7 +67,7 @@ const CaseStudies = () => {
                     <div className="mb-4">
                       <span className="font-semibold text-foreground">The Challenge:</span>
                       <span className="ml-2 text-muted-foreground">
-                        This telecom leader needed a mobile payments platform that could work for everyone—from city users with smartphones to rural communities with basic phones. 
+                        This telecom leader needed a mobile payments platform that could work for everyone: from city users with smartphones to rural communities with basic phones. 
                         They struggled to find a solution that was both scalable and accessible across diverse regions with different devices and network conditions.
                       </span>
                     </div>
@@ -152,7 +152,7 @@ const CaseStudies = () => {
                     </div>
                     <div>
                       <span className="font-semibold text-foreground">Our Solution:</span>
-                      <span className="ml-2 text-muted-foreground">We implemented a secure IVR (Interactive Voice Response) banking system. Customers could simply call a toll-free number and use voice prompts to check balances, transfer funds, and pay bills—all without speaking to an agent.</span>
+                      <span className="ml-2 text-muted-foreground">We implemented a secure IVR (Interactive Voice Response) banking system. Customers could simply call a toll-free number and use voice prompts to check balances, transfer funds, and pay bills, all without speaking to an agent.</span>
                     </div>
                     <div>
                       <span className="font-semibold text-foreground">The Results:</span>
@@ -228,7 +228,7 @@ const CaseStudies = () => {
                     </div>
                     <div>
                       <span className="font-semibold text-foreground">Our Solution:</span>
-                      <span className="ml-2 text-muted-foreground">We created a USSD-based banking solution that enabled users to perform transactions, check balances, and pay bills—all without a data connection. The system was built with robust, end-to-end security to handle high volumes of financial traffic.</span>
+                      <span className="ml-2 text-muted-foreground">We created a USSD-based banking solution that enabled users to perform transactions, check balances, and pay bills, all without a data connection. The system was built with robust, end-to-end security to handle high volumes of financial traffic.</span>
                     </div>
                     <div>
                       <span className="font-semibold text-foreground">The Results:</span>
@@ -261,49 +261,34 @@ const CaseStudies = () => {
               {/* Sidebar */}
               <div className="lg:col-span-1">
                 <div className="sticky top-8 space-y-6">
-                  <div className="bg-card p-6 rounded-lg border shadow-sm hover:shadow-md transition-all duration-300">
-                    <h3 className="text-xl font-bold mb-6 text-primary border-b border-primary/20 pb-3">Related Links</h3>
-                    <div className="space-y-4">
-                      <a href="/banking-solutions" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
-                        <span className="font-medium">Banking Solutions</span>
-                        <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
-                      <a href="/health-services" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
-                        <span className="font-medium">Health Services</span>
-                        <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
-                      <a href="/education-tools" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
-                        <span className="font-medium">Education Tools</span>
-                        <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
-                      <a href="/technical-architecture" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
-                        <span className="font-medium">Technical Architecture</span>
-                        <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
-                      <a href="/partnership-models" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
-                        <span className="font-medium">Partnership Models</span>
-                        <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
+                  <div className="bg-muted/30 p-4 md:p-6 rounded-lg">
+                    <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-primary border-b-2 border-primary pb-2">Related Links</h3>
+                    <div className="space-y-2 md:space-y-3">
+                      <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
+                        Banking Solutions
+                      </Link>
+                      <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
+                        Health Services
+                      </Link>
+                      <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
+                        Education Tools
+                      </Link>
+                      <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
+                        Technical Architecture
+                      </Link>
+                      <Link to="/partnership-models" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
+                        Partnership Models
+                      </Link>
                     </div>
                   </div>
 
-                  <div className="bg-card p-6 rounded-lg border shadow-sm hover:shadow-md transition-all duration-300">
-                    <h3 className="text-xl font-bold mb-4 text-primary">Need Help?</h3>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                  <div className="bg-muted/30 p-4 md:p-6 rounded-lg mb-8">
+                    <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-primary border-b-2 border-primary pb-2">Need Help?</h3>
+                    <p className="text-muted-foreground mb-4 md:mb-6 leading-relaxed">
                       Contact our support team for assistance
                     </p>
-                    <Button variant="cta" className="w-full">
-                      Contact Us
+                    <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]" asChild>
+                      <Link to="/contact">Contact Us</Link>
                     </Button>
                   </div>
                 </div>

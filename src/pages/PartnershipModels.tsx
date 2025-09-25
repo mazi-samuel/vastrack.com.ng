@@ -47,7 +47,7 @@ const PartnershipModelsPage = () => {
             {/* Introduction */}
             <div className="bg-white rounded-lg shadow-sm p-8">
               <p className="text-lg text-gray-700 leading-relaxed">
-                At Vastracktech, we know that the best innovations happen through collaboration. We're committed to building strong, mutually beneficial partnerships with telecom operators, enterprises, government agencies, and technology providers. However you aim to grow—whether by expanding your reach, enhancing your services, or co-creating new solutions—we offer flexible partnership models designed to help you meet your goals.
+                At Vastracktech, we know that the best innovations happen through collaboration. We're committed to building strong, mutually beneficial partnerships with telecom operators, enterprises, government agencies, and technology providers. However you aim to grow: whether by expanding your reach, enhancing your services, or co-creating new solutions, we offer flexible partnership models designed to help you meet your goals.
               </p>
             </div>
 
@@ -252,7 +252,7 @@ const PartnershipModelsPage = () => {
                 Contact our support team for assistance
               </p>
               <Link to="/contact">
-                <Button variant="cta" className="w-full">
+                <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]">
                   Contact Us
                 </Button>
               </Link>

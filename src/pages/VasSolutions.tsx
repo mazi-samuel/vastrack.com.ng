@@ -160,7 +160,7 @@ const VasSolutions = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Easy Integration
+              Easy Integration and <span className="text-primary">Industry Specific</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Our robust APIs and comprehensive documentation make integration simple and straightforward.

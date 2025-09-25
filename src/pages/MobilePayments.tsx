@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import AnimatedIcon from "@/components/AnimatedIcon";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Shield, Zap, Smartphone, TrendingUp, Code, Globe, Users, CreditCard, Receipt, Building, Heart } from "lucide-react";
@@ -107,26 +108,14 @@ const MobilePayments = () => {
               ]}
             />
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              Mobile Payments — Secure, Fast, and Seamless
+              Mobile Payments: Secure, Fast, and Seamless
             </h1>
             <p className="text-xl text-hero-foreground/90 leading-relaxed mb-8">
-              At Vastracktech, we build the secure, flexible mobile payment technology that modern businesses run on. Our solutions empower financial institutions, service providers, and enterprises to facilitate seamless transactions, making it simple for businesses and their customers to send, receive, and manage payments—anytime, anywhere.
+              At Vastracktech, we build the secure, flexible mobile payment technology that modern businesses run on. Our solutions empower financial institutions, service providers, and enterprises to facilitate seamless transactions, making it simple for businesses and their customers to send, receive, and manage payments, anytime, anywhere.
             </p>
-            <Button variant="cta" size="lg" asChild>
+            <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]" asChild>
               <Link to="/contact">Get Started Today</Link>
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Introduction */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              In a world that moves in real-time, your payment platform can't afford to be slow, insecure, or complex. 
-              Our technology is built to excel where it matters most—security, speed, and seamless integration.
-            </p>
           </div>
         </div>
       </section>
@@ -136,10 +125,10 @@ const MobilePayments = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Why Partner with Us for Mobile Payments?
+              Why Partner with <span className="text-primary">Us</span> for Mobile Payments?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Our platform is built to excel where it matters most:
+              In a world that moves in real-time, your payment platform can't afford to be slow, insecure, or complex. Our platform is built to excel where it matters most: security, speed, and seamless integration.
             </p>
           </div>
 
@@ -147,7 +136,13 @@ const MobilePayments = () => {
             {features.map((feature, index) => (
               <Card key={index} className="p-8 bg-muted border-0 hover:shadow-card transition-all duration-300 hover:-translate-y-2">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <feature.icon className="h-8 w-8 text-primary" />
+                  <AnimatedIcon 
+                    icon={feature.icon} 
+                    size={32} 
+                    className="text-primary" 
+                    animationType="bounce" 
+                    hoverType="scale"
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-foreground">
                   {feature.title}
@@ -178,7 +173,13 @@ const MobilePayments = () => {
               <div key={index} className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                 <div className={`px-4 lg:px-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="bg-gradient-primary w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                    <service.icon className="h-8 w-8 text-primary-foreground" />
+                    <AnimatedIcon 
+                      icon={service.icon} 
+                      size={32} 
+                      className="text-primary-foreground" 
+                      animationType="pulse" 
+                      hoverType="bounce"
+                    />
                   </div>
                   <h3 className="text-3xl font-bold mb-6 text-foreground">
                     {service.title}
@@ -220,7 +221,13 @@ const MobilePayments = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="p-8 text-center bg-muted border-0 hover:shadow-card transition-all duration-300">
               <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Code className="h-8 w-8 text-primary" />
+                <AnimatedIcon 
+                  icon={Code} 
+                  size={32} 
+                  className="text-primary" 
+                  animationType="float" 
+                  hoverType="glow"
+                />
               </div>
               <h3 className="text-xl font-bold mb-4 text-foreground">Developer-Friendly APIs</h3>
               <p className="text-muted-foreground">
@@ -230,7 +237,13 @@ const MobilePayments = () => {
 
             <Card className="p-8 text-center bg-muted border-0 hover:shadow-card transition-all duration-300">
               <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Smartphone className="h-8 w-8 text-primary" />
+                <AnimatedIcon 
+                  icon={Smartphone} 
+                  size={32} 
+                  className="text-primary" 
+                  animationType="wiggle" 
+                  hoverType="bounce"
+                />
               </div>
               <h3 className="text-xl font-bold mb-4 text-foreground">Customizable SDKs</h3>
               <p className="text-muted-foreground">
@@ -240,7 +253,13 @@ const MobilePayments = () => {
 
             <Card className="p-8 text-center bg-muted border-0 hover:shadow-card transition-all duration-300">
               <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="h-8 w-8 text-primary" />
+                <AnimatedIcon 
+                  icon={Zap} 
+                  size={32} 
+                  className="text-primary" 
+                  animationType="pulse" 
+                  hoverType="scale"
+                />
               </div>
               <h3 className="text-xl font-bold mb-4 text-foreground">Smooth Integration</h3>
               <p className="text-muted-foreground">
@@ -263,14 +282,20 @@ const MobilePayments = () => {
             </p>
           </div>
 
-          <Card className="bg-gradient-primary text-primary-foreground p-12 text-center border-0">
+          <Card className="bg-gradient-primary text-primary-foreground p-8 text-center border-0 max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">
-              <CreditCard className="h-8 w-8 mr-3" />
-              <span className="text-2xl font-semibold">
+              <AnimatedIcon 
+                icon={CreditCard} 
+                size={32} 
+                className="mr-3" 
+                animationType="pulse"
+                hoverType="bounce"
+              />
+              <span className="text-xl font-semibold">
                 Ready to integrate a better way to pay? Contact us today to get started.
               </span>
             </div>
-            <Button variant="secondary" size="lg" asChild>
+            <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]" asChild>
               <Link to="/contact">Contact Our Team</Link>
             </Button>
           </Card>
@@ -278,26 +303,43 @@ const MobilePayments = () => {
       </section>
 
       {/* Related Links Sidebar */}
-      <section className="py-16 bg-secondary/30">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-md ml-auto">
-            <h3 className="text-2xl font-bold mb-6 text-primary">Related Links</h3>
-            <div className="space-y-4">
-              <Link to="/sms-gateway" className="block text-primary hover:text-primary-glow transition-colors">
-                SMS Gateway
-              </Link>
-              <Link to="/ussd-services" className="block text-primary hover:text-primary-glow transition-colors">
-                USSD Services
-              </Link>
-              <Link to="/ivr-solutions" className="block text-primary hover:text-primary-glow transition-colors">
-                IVR Solutions
-              </Link>
-              <Link to="/services" className="block text-primary hover:text-primary-glow transition-colors">
-                All Services
-              </Link>
-              <Link to="/contact" className="block text-primary hover:text-primary-glow transition-colors">
-                Contact Support
-              </Link>
+          <div className="max-w-md mx-auto">
+            <div className="bg-muted/30 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+              <h3 className="text-xl font-bold mb-6 text-primary border-b-2 border-primary pb-3">Related Links</h3>
+              <div className="space-y-3">
+                <Link to="/sms-gateway" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">SMS Gateway</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link to="/ussd-services" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">USSD Services</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link to="/ivr-solutions" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">IVR Solutions</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link to="/services" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">All Services</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link to="/contact" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">Contact Support</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -205,7 +205,7 @@ const TechnicalArchitecturePage = () => {
                     Contact our support team for assistance
                   </p>
                   <Link to="/contact">
-                    <Button variant="cta" className="w-full">
+                    <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]">
                       Contact Us
                     </Button>
                   </Link>

@@ -75,7 +75,7 @@ const BankingSolutions = () => {
             />
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight px-2">
-              Banking Solutions – Secure, Scalable<br className="hidden sm:block" />
+              Banking Solutions: <span className="text-primary">Secure</span>, Scalable<br className="hidden sm:block" />
               <span className="sm:hidden"> </span>& Innovative Digital Banking
             </h1>
           </div>
@@ -90,12 +90,12 @@ const BankingSolutions = () => {
             <div className="lg:col-span-2">
               <div className="prose prose-sm sm:prose-lg max-w-none">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                  At Vastracktech, we create banking solutions that help financial institutions offer secure, fast, and customer-focused digital services. Our value-added solutions enhance mobile banking, streamline digital transactions, and deepen customer engagement—making everyday financial operations smooth and reliable while supporting greater financial inclusion.
+                  At Vastracktech, we create banking solutions that help financial institutions offer secure, fast, and customer-focused digital services. Our value-added solutions enhance mobile banking, streamline digital transactions, and deepen customer engagement, making everyday financial operations smooth and reliable while supporting greater financial inclusion.
                 </p>
 
                 <div className="mb-8 md:mb-12">
                   <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-foreground border-b-2 border-primary pb-2">
-                    Why Choose Vastracktech's Banking Solutions?
+                    Why Choose <span className="text-primary">Vastracktech's</span> Banking Solutions?
                   </h2>
                   
                   <div className="space-y-4 mb-8">
@@ -108,13 +108,13 @@ const BankingSolutions = () => {
                   </div>
 
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                    We prioritize security and compliance, with robust end-to-end encryption, advanced fraud detection, and full regulatory adherence. Our platforms offer omnichannel support, integrating seamlessly with USSD, SMS, mobile apps, and web banking. Whether you're a bank, microfinance institution, fintech company, or digital lender, our solutions are scalable and tailored to fit your specific needs. With easy API integration, they work smoothly alongside your existing systems. Plus, you can offer real-time transactions—from instant transfers and bill payments to quick loan processing—and extend mobile-first banking to unbanked and underserved communities.
+                    We prioritize security and compliance, with robust end-to-end encryption, advanced fraud detection, and full regulatory adherence. Our platforms offer omnichannel support, integrating seamlessly with USSD, SMS, mobile apps, and web banking. Whether you're a bank, microfinance institution, fintech company, or digital lender, our solutions are scalable and tailored to fit your specific needs. With easy API integration, they work smoothly alongside your existing systems. Plus, you can offer real-time transactions, from instant transfers and bill payments to quick loan processing, and extend mobile-first banking to unbanked and underserved communities.
                   </p>
                 </div>
 
                 <div className="mb-12">
                   <h2 className="text-3xl font-bold mb-6 text-foreground border-b-2 border-primary pb-2">
-                    Comprehensive Banking Solutions
+                    Comprehensive <span className="text-primary">Banking Solutions</span>
                   </h2>
                   
                   <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8 leading-relaxed">
@@ -138,18 +138,17 @@ const BankingSolutions = () => {
 
                 <div className="mb-8 md:mb-12">
                   <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-foreground border-b-2 border-primary pb-2">
-                    Transforming Banking with Innovation
+                    Transforming Banking with <span className="text-primary">Innovation</span>
                   </h2>
                   
                   <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                    At the heart of what we do is innovation—aimed at boosting operational efficiency, improving customer experience, and expanding access to financial services. No matter the size or type of your organization, Vastracktech is here to help you build a secure, seamless, and future-ready banking experience.
+                    At the heart of what we do is innovation: aimed at boosting operational efficiency, improving customer experience, and expanding access to financial services. No matter the size or type of your organization, Vastracktech is here to help you build a secure, seamless, and future-ready banking experience.
                   </p>
                 </div>
 
                 {/* CTA Section */}
                 <div className="bg-gradient-primary text-primary-foreground p-6 md:p-8 rounded-2xl text-center">
-                  <div className="flex items-center justify-center mb-4">
-                    <Shield className="h-8 w-8 mr-3" />
+                  <div className="mb-4">
                     <span className="text-xl font-semibold">
                       Partner with us today! Let's revolutionize banking with smart digital solutions.
                     </span>
@@ -191,7 +190,7 @@ const BankingSolutions = () => {
                     Contact our support team for assistance
                   </p>
                   <Link to="/contact">
-                    <Button variant="cta" className="w-full">
+                    <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]">
                       Contact Us
                     </Button>
                   </Link>

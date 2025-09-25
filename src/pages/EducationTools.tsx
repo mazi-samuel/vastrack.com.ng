@@ -26,18 +26,17 @@ const EducationTools = () => {
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-hero/70"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <Breadcrumb
-            items={[
-              { label: "Home", href: "/" },
-              { label: "VAS Solutions", href: "/services" },
-              { label: "Education Tools", isActive: true }
-            ]}
-            className="mb-8"
-          />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-              Education Tools - Empowering Learning with Digital Innovation
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "VAS Solutions", href: "/vas-solutions" },
+                { label: "Education Tools", isActive: true }
+              ]}
+            />
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+              Education Tools: Empowering Learning with Digital Innovation
             </h1>
           </div>
         </div>
@@ -98,7 +97,7 @@ const EducationTools = () => {
                 </div>
 
                 <h2 className="text-3xl font-bold text-foreground mb-8 border-b-2 border-primary pb-4">
-                  Comprehensive Digital Education Solutions
+                  Comprehensive <span className="text-primary">Education Solutions</span>
                 </h2>
 
                 <p className="text-muted-foreground mb-8 leading-relaxed">
@@ -213,7 +212,7 @@ const EducationTools = () => {
                     Contact our support team for assistance
                   </p>
                   <Link to="/contact">
-                    <Button variant="cta" className="w-full">
+                    <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]">
                       Contact Us
                     </Button>
                   </Link>

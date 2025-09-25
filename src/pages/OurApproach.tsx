@@ -95,7 +95,7 @@ const OurApproach = () => {
                   Your Challenges, Our Shared Mission
                 </h2>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                  We don't believe in one-size-fits-all solutions. Instead, we become an extension of your team. We take the time to really understand what makes your business tick—your unique goals, your biggest challenges, and the landscape you operate in. By working side-by-side, we craft solutions that aren't just advanced, but are genuinely right for you. And our job isn't done at launch; we stick around to help you refine, adapt, and thrive as the digital world evolves.
+                  We don't believe in one-size-fits-all solutions. Instead, we become an extension of your team. We take the time to really understand what makes your business tick, your unique goals, your biggest challenges, and the landscape you operate in. By working side-by-side, we craft solutions that aren't just advanced, but are genuinely right for you. And our job isn't done at launch; we stick around to help you refine, adapt, and thrive as the digital world evolves.
                 </p>
               </div>
 
@@ -144,7 +144,7 @@ const OurApproach = () => {
                 </div>
 
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                  Our agile, future-proof approach ensures you're not just following industry standards—you're setting them. No matter your sector, from telecom to finance, healthcare to education, we're committed to delivering the transformative solutions that drive your long-term success.
+                  Our agile, future-proof approach ensures you're not just following industry standards, you're setting them. No matter your sector, from telecom to finance, healthcare to education, we're committed to delivering the transformative solutions that drive your long-term success.
                 </p>
               </div>
 
@@ -154,7 +154,7 @@ const OurApproach = () => {
                 <p className="text-base md:text-lg mb-4 md:mb-6 text-primary-foreground/90">
                   Let's shape the future together. Partner with Vastracktech today.
                 </p>
-                <Button asChild variant="cta" size="lg">
+                <Button asChild variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]">
                   <Link to="/contact">
                     Get Started
                   </Link>
@@ -194,7 +194,7 @@ const OurApproach = () => {
                   <p className="text-sm md:text-base text-muted-foreground mb-4 leading-relaxed">
                     Contact our support team for assistance
                   </p>
-                  <Button asChild variant="cta" size="sm" className="w-full">
+                  <Button asChild variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]">
                     <Link to="/contact">
                       Contact Us
                     </Link>

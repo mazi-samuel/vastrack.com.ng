@@ -93,8 +93,8 @@ const SmsGateway = () => {
         <div className="absolute inset-0 bg-hero/70"></div>
         
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="max-w-4xl">
+          <div className="max-w-6xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto">
               <Breadcrumb
                 items={[
                   { label: "Home", href: "/" },
@@ -104,12 +104,12 @@ const SmsGateway = () => {
                 className="mb-8"
               />
               <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-                SMS Gateway — Seamless, Reliable, and Scalable Messaging Solutions
+                SMS Gateway: Seamless, Reliable, and Scalable Messaging Solutions
               </h1>
               <p className="text-xl text-hero-foreground/90 leading-relaxed mb-8">
                 At Vastracktech, we build the SMS Gateway that keeps businesses connected. Our platform is engineered for instant, secure, and high-volume messaging, empowering everything from critical transaction alerts to large-scale marketing campaigns.
               </p>
-              <Button variant="cta" size="lg" asChild>
+              <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]" asChild>
                 <Link to="/contact">Get Started Today</Link>
               </Button>
             </div>
@@ -122,7 +122,7 @@ const SmsGateway = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Why Your Business Will Love Our SMS Gateway
+              Why Your Business Will Love Our <span className="text-primary">SMS Gateway</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
               We provide the reliable foundation so you can communicate with your customers, no matter the scale. 
@@ -163,7 +163,7 @@ const SmsGateway = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Powering Multiple Use Cases
+              Powering Multiple <span className="text-primary">Use Cases</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Our SMS Gateway is designed for diverse business needs, including:
@@ -213,7 +213,7 @@ const SmsGateway = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Seamless Integration & API Support
+              Seamless Integration & <span className="text-primary">API Support</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Our developer-friendly API ensures quick and hassle-free integration with your existing platforms. 
@@ -261,11 +261,11 @@ const SmsGateway = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Transform Your Business Communication with Vastracktech
+              Transform Your <span className="text-primary">Business Communication</span> with Vastracktech
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
               Experience the power of instant, reliable, and cost-effective SMS messaging with Vastracktech. 
-              Connect, engage, and grow—effortlessly.
+              Connect, engage, and grow, effortlessly.
             </p>
           </div>
 
@@ -282,7 +282,7 @@ const SmsGateway = () => {
                 Ready to transform your messaging? Contact us today!
               </span>
             </div>
-            <Button variant="secondary" size="lg" asChild>
+            <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]" asChild>
               <Link to="/contact">Contact Our Team</Link>
             </Button>
           </Card>

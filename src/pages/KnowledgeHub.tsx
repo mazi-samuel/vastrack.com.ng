@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/images/gabriella-clare-marino-GSLA0FVY9qI-unsplash.jpg";
 
 const KnowledgeHub = () => {
@@ -22,16 +23,17 @@ const KnowledgeHub = () => {
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-hero/70"></div>
         
-        <div className="container mx-auto px-6 relative z-10">
-          <Breadcrumb
-            items={[
-              { label: "Home", href: "/" },
-              { label: "Resource Centre", href: "/resource-centre" },
-              { label: "Knowledge Hub", isActive: true }
-            ]}
-            className="mb-8"
-          />
-          <h1 className="text-5xl font-bold mb-6">Knowledge Hub</h1>
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Resource Centre", href: "/resource-centre" },
+                { label: "Knowledge Hub", isActive: true }
+              ]}
+            />
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6">Knowledge Hub</h1>
+          </div>
         </div>
       </section>
 
@@ -100,7 +102,7 @@ const KnowledgeHub = () => {
                     → Developers
                   </h3>
                   <p className="text-gray-700">
-                    These are the creators—the freelance or independent designers of content, applications, 
+                    These are the creators: the freelance or independent designers of content, applications, 
                     and platforms. They do not hold distribution licenses and must therefore partner with 
                     a licensed CASP to bring their services to market.
                   </p>
@@ -234,32 +236,44 @@ const KnowledgeHub = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="bg-blue-600 text-white p-8 rounded-lg text-center">
+            <div className="bg-gradient-primary text-primary-foreground p-8 rounded-lg text-center">
               <h3 className="text-2xl font-bold mb-4">
-                📞 Contact us now to learn how to seamlessly integrate VAS solutions into your business.
+                Contact us now to learn how to seamlessly integrate VAS solutions into your business.
               </h3>
             </div>
           </div>
 
           {/* Sidebar */}
           <div className="lg:col-span-1">
-            <div className="bg-white p-6 rounded-lg border sticky top-8">
-              <h3 className="text-xl font-bold text-teal-600 mb-4">Related Links</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a href="/case-studies" className="text-teal-600 hover:text-teal-700 transition-colors">
+            <div className="lg:sticky lg:top-8 space-y-6 md:space-y-8">
+              {/* Related Links */}
+              <div className="bg-muted/30 p-4 md:p-6 rounded-lg">
+                <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-primary border-b-2 border-primary pb-2">
+                  Related Links
+                </h3>
+                <div className="space-y-2 md:space-y-3">
+                  <Link to="/case-studies" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
                     Case Studies
-                  </a>
-                </li>
-              </ul>
+                  </Link>
+                  <Link to="/services" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
+                    All Services
+                  </Link>
+                  <Link to="/about" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
+                    About Us
+                  </Link>
+                </div>
+              </div>
 
-              <div className="mt-8">
-                <h3 className="text-xl font-bold text-teal-600 mb-4">Need Help?</h3>
-                <p className="text-gray-600 mb-4">
+              {/* Need Help */}
+              <div className="bg-muted/30 p-4 md:p-6 rounded-lg">
+                <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-primary border-b-2 border-primary pb-2">
+                  Need Help?
+                </h3>
+                <p className="text-muted-foreground mb-4 md:mb-6">
                   Contact our support team for assistance
                 </p>
-                <Button className="w-full bg-red-500 hover:bg-red-600">
-                  Contact Us
+                <Button variant="cta" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-h-[48px]" asChild>
+                  <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>
             </div>
