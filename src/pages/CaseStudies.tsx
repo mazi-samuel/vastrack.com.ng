@@ -48,7 +48,9 @@ const CaseStudies = () => {
               <div className="lg:col-span-3">
                 <div className="bg-muted/50 p-8 rounded-lg mb-8">
                   <p className="text-lg leading-relaxed text-muted-foreground">
-                    At Vastracktech, our greatest pride comes from seeing our solutions make a real difference for our clients. We don't just provide technology; we partner with businesses to solve complex challenges and drive tangible growth. Here are a few stories that show how we've helped organizations transform their operations and better serve their customers.
+                    At Vastracktech, our greatest pride comes from seeing our solutions make a real difference for our clients. 
+                    We don't just provide technology; we partner with businesses to solve complex challenges and drive tangible growth. 
+                    Here are a few stories that show how we've helped organizations transform their operations and better serve their customers.
                   </p>
                 </div>
 
@@ -62,13 +64,19 @@ const CaseStudies = () => {
                       <span className="font-semibold text-foreground">Client:</span>
                       <span className="ml-2 text-muted-foreground">A Major African Telecom Operator</span>
                     </div>
-                    <div>
+                    <div className="mb-4">
                       <span className="font-semibold text-foreground">The Challenge:</span>
-                      <span className="ml-2 text-muted-foreground">This telecom leader needed a mobile payments platform that could work for everyone—from city users with smartphones to rural communities with basic phones. They struggled to find a solution that was both scalable and accessible across diverse regions with different devices and network conditions.</span>
+                      <span className="ml-2 text-muted-foreground">
+                        This telecom leader needed a mobile payments platform that could work for everyone—from city users with smartphones to rural communities with basic phones. 
+                        They struggled to find a solution that was both scalable and accessible across diverse regions with different devices and network conditions.
+                      </span>
                     </div>
-                    <div>
+                    <div className="mb-4">
                       <span className="font-semibold text-foreground">Our Solution:</span>
-                      <span className="ml-2 text-muted-foreground">We built a robust mobile payments platform that integrated seamlessly with their existing telecom infrastructure. It enabled bill payments, airtime top-ups, and money transfers through simple SMS, USSD codes, and mobile apps, ensuring it worked perfectly even in low-bandwidth areas.</span>
+                      <span className="ml-2 text-muted-foreground">
+                        We built a robust mobile payments platform that integrated seamlessly with their existing telecom infrastructure. 
+                        It enabled bill payments, airtime top-ups, and money transfers through simple SMS, USSD codes, and mobile apps, ensuring it worked perfectly even in low-bandwidth areas.
+                      </span>
                     </div>
                     <div>
                       <span className="font-semibold text-foreground">The Results:</span>
@@ -252,21 +260,46 @@ const CaseStudies = () => {
 
               {/* Sidebar */}
               <div className="lg:col-span-1">
-                <div className="sticky top-8">
-                  <div className="bg-card p-6 rounded-lg border mb-8">
-                    <h3 className="text-xl font-bold mb-4 text-primary">Related Links</h3>
-                    <div className="space-y-3">
-                      <a href="/banking-solutions" className="block text-primary hover:underline">Banking Solutions</a>
-                      <a href="/health-services" className="block text-primary hover:underline">Health Services</a>
-                      <a href="/education-tools" className="block text-primary hover:underline">Education Tools</a>
-                      <a href="/technical-architecture" className="block text-primary hover:underline">Technical Architecture</a>
-                      <a href="/partnership-models" className="block text-primary hover:underline">Partnership Models</a>
+                <div className="sticky top-8 space-y-6">
+                  <div className="bg-card p-6 rounded-lg border shadow-sm hover:shadow-md transition-all duration-300">
+                    <h3 className="text-xl font-bold mb-6 text-primary border-b border-primary/20 pb-3">Related Links</h3>
+                    <div className="space-y-4">
+                      <a href="/banking-solutions" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                        <span className="font-medium">Banking Solutions</span>
+                        <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                      <a href="/health-services" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                        <span className="font-medium">Health Services</span>
+                        <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                      <a href="/education-tools" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                        <span className="font-medium">Education Tools</span>
+                        <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                      <a href="/technical-architecture" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                        <span className="font-medium">Technical Architecture</span>
+                        <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                      <a href="/partnership-models" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                        <span className="font-medium">Partnership Models</span>
+                        <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
                     </div>
                   </div>
 
-                  <div className="bg-card p-6 rounded-lg border">
+                  <div className="bg-card p-6 rounded-lg border shadow-sm hover:shadow-md transition-all duration-300">
                     <h3 className="text-xl font-bold mb-4 text-primary">Need Help?</h3>
-                    <p className="text-muted-foreground mb-4">
+                    <p className="text-muted-foreground mb-4 leading-relaxed">
                       Contact our support team for assistance
                     </p>
                     <Button variant="cta" className="w-full">

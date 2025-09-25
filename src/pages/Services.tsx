@@ -105,7 +105,7 @@ const Services = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Our Core VAS Services
+              Our Core <span className="text-primary">VAS Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Discover our flagship telecommunications services that power businesses across Nigeria. 

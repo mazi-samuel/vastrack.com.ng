@@ -93,35 +93,26 @@ const SmsGateway = () => {
         <div className="absolute inset-0 bg-hero/70"></div>
         
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <Breadcrumb
-              items={[
-                { label: "Home", href: "/" },
-                { label: "Products & Services", href: "/services" },
-                { label: "SMS Gateway", isActive: true }
-              ]}
-            />
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              SMS Gateway — Seamless, Reliable, and Scalable Messaging Solutions
-            </h1>
-            <p className="text-xl text-hero-foreground/90 leading-relaxed mb-8">
-              At Vastracktech, we build the SMS Gateway that keeps businesses connected. Our platform is engineered for instant, secure, and high-volume messaging, empowering everything from critical transaction alerts to large-scale marketing campaigns.
-            </p>
-            <Button variant="cta" size="lg" asChild>
-              <Link to="/contact">Get Started Today</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Introduction */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              We provide the reliable foundation so you can communicate with your customers, no matter the scale. 
-              Our gateway seamlessly routes messages with unmatched reliability and speed.
-            </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="max-w-4xl">
+              <Breadcrumb
+                items={[
+                  { label: "Home", href: "/" },
+                  { label: "Products & Services", href: "/services" },
+                  { label: "SMS Gateway", isActive: true }
+                ]}
+                className="mb-8"
+              />
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+                SMS Gateway — Seamless, Reliable, and Scalable Messaging Solutions
+              </h1>
+              <p className="text-xl text-hero-foreground/90 leading-relaxed mb-8">
+                At Vastracktech, we build the SMS Gateway that keeps businesses connected. Our platform is engineered for instant, secure, and high-volume messaging, empowering everything from critical transaction alerts to large-scale marketing campaigns.
+              </p>
+              <Button variant="cta" size="lg" asChild>
+                <Link to="/contact">Get Started Today</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -133,7 +124,11 @@ const SmsGateway = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
               Why Your Business Will Love Our SMS Gateway
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
+              We provide the reliable foundation so you can communicate with your customers, no matter the scale. 
+              Our gateway seamlessly routes messages with unmatched reliability and speed.
+            </p>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               We know you have choices. Here's what sets our solution apart from the competition.
             </p>
           </div>
@@ -142,7 +137,14 @@ const SmsGateway = () => {
             {features.map((feature, index) => (
               <Card key={index} className="p-8 bg-muted border-0 hover:shadow-card transition-all duration-300 hover:-translate-y-2">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <feature.icon className="h-8 w-8 text-primary" />
+                  <AnimatedIcon 
+                    icon={feature.icon} 
+                    size={32} 
+                    className="text-primary" 
+                    animationType="pulse"
+                    hoverType="bounce"
+                    delay={index * 0.1}
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-foreground">
                   {feature.title}
@@ -267,11 +269,17 @@ const SmsGateway = () => {
             </p>
           </div>
 
-          <Card className="bg-gradient-primary text-primary-foreground p-12 text-center border-0">
+          <Card className="bg-gradient-primary text-primary-foreground p-8 text-center border-0 max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">
-              <MessageSquare className="h-8 w-8 mr-3" />
-              <span className="text-2xl font-semibold">
-                Get started today! Contact us to integrate our SMS Gateway into your business.
+              <AnimatedIcon 
+                icon={MessageSquare} 
+                size={32} 
+                className="mr-3" 
+                animationType="pulse"
+                hoverType="bounce"
+              />
+              <span className="text-xl font-semibold">
+                Ready to transform your messaging? Contact us today!
               </span>
             </div>
             <Button variant="secondary" size="lg" asChild>
@@ -282,26 +290,43 @@ const SmsGateway = () => {
       </section>
 
       {/* Related Links Sidebar */}
-      <section className="py-16 bg-secondary/30">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-md ml-auto">
-            <h3 className="text-2xl font-bold mb-6 text-primary">Related Links</h3>
-            <div className="space-y-4">
-              <Link to="/ussd-services" className="block text-primary hover:text-primary-glow transition-colors">
-                USSD Services
-              </Link>
-              <Link to="/ivr-solutions" className="block text-primary hover:text-primary-glow transition-colors">
-                IVR Solutions
-              </Link>
-              <Link to="/mobile-payments" className="block text-primary hover:text-primary-glow transition-colors">
-                Mobile Payments
-              </Link>
-              <Link to="/services" className="block text-primary hover:text-primary-glow transition-colors">
-                All Services
-              </Link>
-              <Link to="/contact" className="block text-primary hover:text-primary-glow transition-colors">
-                Contact Support
-              </Link>
+          <div className="max-w-md mx-auto">
+            <div className="bg-muted/30 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+              <h3 className="text-xl font-bold mb-6 text-primary border-b-2 border-primary pb-3">Related Links</h3>
+              <div className="space-y-3">
+                <Link to="/ussd-services" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">USSD Services</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link to="/ivr-solutions" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">IVR Solutions</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link to="/mobile-payments" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">Mobile Payments</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link to="/services" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">All Services</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link to="/contact" className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 group">
+                  <span className="font-medium">Contact Support</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

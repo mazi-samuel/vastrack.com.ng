@@ -223,21 +223,21 @@ const PartnershipModelsPage = () => {
           {/* Sidebar */}
           <div className="sticky top-8 space-y-8">
             {/* Related Links */}
-            <div>
-              <h3 className="text-xl font-bold mb-6 text-primary border-b-2 border-primary pb-2">
+            <div className="bg-muted/30 p-4 md:p-6 rounded-lg">
+              <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-primary border-b-2 border-primary pb-2">
                 Related Links
               </h3>
-              <div className="space-y-3">
-                <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors duration-300">
+              <div className="space-y-2 md:space-y-3">
+                <Link to="/banking-solutions" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
                   Banking Solutions
                 </Link>
-                <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors duration-300">
+                <Link to="/health-services" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
                   Health Services
                 </Link>
-                <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors duration-300">
+                <Link to="/education-tools" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
                   Education Tools
                 </Link>
-                <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors duration-300">
+                <Link to="/technical-architecture" className="block text-primary hover:text-primary-glow transition-colors duration-300 py-2 px-3 rounded hover:bg-primary/5 text-sm md:text-base">
                   Technical Architecture
                 </Link>
               </div>

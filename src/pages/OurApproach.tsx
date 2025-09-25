@@ -77,10 +77,10 @@ const OurApproach = () => {
 
       {/* Main Content Section */}
       <section className="py-12 md:py-16 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Main Content */}
-            <div className="lg:col-span-2 space-y-8 md:space-y-12">
+            <div className="lg:col-span-2 space-y-8 md:space-y-12 pl-2 md:pl-4">
               
               {/* Introduction */}
               <div className="prose prose-sm sm:prose-lg max-w-none">
@@ -154,7 +154,7 @@ const OurApproach = () => {
                 <p className="text-base md:text-lg mb-4 md:mb-6 text-primary-foreground/90">
                   Let's shape the future together. Partner with Vastracktech today.
                 </p>
-                <Button asChild variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90">
+                <Button asChild variant="cta" size="lg">
                   <Link to="/contact">
                     Get Started
                   </Link>

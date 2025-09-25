@@ -32,22 +32,22 @@ const CountUp = ({ end, duration = 2, isInView }: { end: string, duration?: numb
 const Statistics = () => {
   const stats = [
     {
-      number: "1000+",
+      number: "30+",
       label: "Active Clients",
       description: "Businesses trust our services"
     },
     {
-      number: "99.9%",
+      number: "99%",
       label: "Uptime",
       description: "Reliable service guarantee"
     },
     {
-      number: "50M+",
+      number: "30M+",
       label: "Messages/Month",
       description: "Successfully delivered monthly"
     },
     {
-      number: "15+",
+      number: "12+",
       label: "Years Experience",
       description: "Industry expertise"
     }

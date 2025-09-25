@@ -72,7 +72,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="bg-gradient-card rounded-2xl p-12 text-center">
-              <div className="text-6xl font-bold text-primary mb-4">15+</div>
+              <div className="text-6xl font-bold text-primary mb-4">12+</div>
               <div className="text-xl font-semibold text-foreground mb-2">Years of Excellence</div>
               <p className="text-muted-foreground">
                 Serving Nigeria's telecommunications industry
@@ -80,15 +80,15 @@ const About = () => {
             </div>
             <div className="px-6">
               <h2 className="text-4xl font-bold mb-6 text-foreground">
-                Our Story
+                Our <span className="text-primary">Story</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Vastracktech Technologies was founded with a vision to transform how businesses 
                 communicate with their customers through innovative telecommunications solutions.
               </p>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Over 15 years of experience has positioned us as a trusted partner for over 1000 
-                businesses across Nigeria, delivering reliable SMS Gateway, USSD Services, IVR 
+                Over 12 years of experience has positioned us as a trusted partner for businesses 
+                across Nigeria, delivering reliable SMS Gateway, USSD Services, IVR 
                 Solutions, and Mobile Payment platforms.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -105,7 +105,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Our Values
+              Our <span className="text-primary">Values</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               The principles that guide our mission to deliver exceptional 
